@@ -1,0 +1,5 @@
+pandas>=2.2,<4
+numpy>=1.26,<3
+plotly>=6.0,<7
+# LSEG is required only for fresh pulls; it is preinstalled in CodeBook.
+# Install lseg-data separately if fetching from an entitled desktop environment.

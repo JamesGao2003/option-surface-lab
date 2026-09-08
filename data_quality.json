@@ -1,0 +1,15 @@
+{
+  "candidate_count": 442,
+  "observed_contracts": 361,
+  "failed_requests": 0,
+  "no_observations": 81,
+  "mid_count": 8314,
+  "trade_count": 6701,
+  "calls": 182,
+  "puts": 179,
+  "duplicates": 0,
+  "negative_prices": 0,
+  "stock_first": "2026-06-12",
+  "stock_last": "2026-09-04",
+  "cache_sha256": "ca786697a39ec4b528c4dcd843c051f69ce7836602189f94e7de55c1d2309be4"
+}

@@ -1,0 +1,1064 @@
+[
+  {
+    "date": "2026-06-12",
+    "side": "Call",
+    "denominator": 73,
+    "mid_only": 31,
+    "percent": 42.465753424657535,
+    "paired": 35,
+    "median": 0.09499999999999997
+  },
+  {
+    "date": "2026-06-12",
+    "side": "Put",
+    "denominator": 81,
+    "mid_only": 23,
+    "percent": 28.395061728395063,
+    "paired": 51,
+    "median": 0.04499999999999993
+  },
+  {
+    "date": "2026-06-15",
+    "side": "Call",
+    "denominator": 70,
+    "mid_only": 31,
+    "percent": 44.285714285714285,
+    "paired": 39,
+    "median": 0.050000000000000266
+  },
+  {
+    "date": "2026-06-15",
+    "side": "Put",
+    "denominator": 68,
+    "mid_only": 17,
+    "percent": 25.0,
+    "paired": 48,
+    "median": 0.02500000000000001
+  },
+  {
+    "date": "2026-06-16",
+    "side": "Call",
+    "denominator": 70,
+    "mid_only": 31,
+    "percent": 44.285714285714285,
+    "paired": 39,
+    "median": 0.11499999999999999
+  },
+  {
+    "date": "2026-06-16",
+    "side": "Put",
+    "denominator": 68,
+    "mid_only": 25,
+    "percent": 36.76470588235294,
+    "paired": 40,
+    "median": 0.04999999999999999
+  },
+  {
+    "date": "2026-06-17",
+    "side": "Call",
+    "denominator": 70,
+    "mid_only": 43,
+    "percent": 61.42857142857143,
+    "paired": 27,
+    "median": 0.06499999999999995
+  },
+  {
+    "date": "2026-06-17",
+    "side": "Put",
+    "denominator": 68,
+    "mid_only": 28,
+    "percent": 41.1764705882353,
+    "paired": 37,
+    "median": 0.07000000000000006
+  },
+  {
+    "date": "2026-06-18",
+    "side": "Call",
+    "denominator": 78,
+    "mid_only": 28,
+    "percent": 35.8974358974359,
+    "paired": 50,
+    "median": 0.10749999999999993
+  },
+  {
+    "date": "2026-06-18",
+    "side": "Put",
+    "denominator": 76,
+    "mid_only": 19,
+    "percent": 25.0,
+    "paired": 52,
+    "median": 0.04500000000000004
+  },
+  {
+    "date": "2026-06-22",
+    "side": "Call",
+    "denominator": 88,
+    "mid_only": 35,
+    "percent": 39.77272727272727,
+    "paired": 53,
+    "median": 0.06499999999999995
+  },
+  {
+    "date": "2026-06-22",
+    "side": "Put",
+    "denominator": 86,
+    "mid_only": 11,
+    "percent": 12.790697674418604,
+    "paired": 69,
+    "median": 0.040000000000000036
+  },
+  {
+    "date": "2026-06-23",
+    "side": "Call",
+    "denominator": 88,
+    "mid_only": 32,
+    "percent": 36.36363636363637,
+    "paired": 56,
+    "median": 0.08499999999999996
+  },
+  {
+    "date": "2026-06-23",
+    "side": "Put",
+    "denominator": 86,
+    "mid_only": 10,
+    "percent": 11.627906976744185,
+    "paired": 70,
+    "median": 0.05500000000000006
+  },
+  {
+    "date": "2026-06-24",
+    "side": "Call",
+    "denominator": 88,
+    "mid_only": 22,
+    "percent": 25.0,
+    "paired": 66,
+    "median": 0.0475000000000001
+  },
+  {
+    "date": "2026-06-24",
+    "side": "Put",
+    "denominator": 86,
+    "mid_only": 16,
+    "percent": 18.6046511627907,
+    "paired": 65,
+    "median": 0.06000000000000005
+  },
+  {
+    "date": "2026-06-25",
+    "side": "Call",
+    "denominator": 105,
+    "mid_only": 42,
+    "percent": 40.0,
+    "paired": 62,
+    "median": 0.05250000000000002
+  },
+  {
+    "date": "2026-06-25",
+    "side": "Put",
+    "denominator": 103,
+    "mid_only": 29,
+    "percent": 28.155339805825243,
+    "paired": 68,
+    "median": 0.04999999999999999
+  },
+  {
+    "date": "2026-06-26",
+    "side": "Call",
+    "denominator": 105,
+    "mid_only": 30,
+    "percent": 28.571428571428573,
+    "paired": 64,
+    "median": 0.050000000000000155
+  },
+  {
+    "date": "2026-06-26",
+    "side": "Put",
+    "denominator": 103,
+    "mid_only": 15,
+    "percent": 14.563106796116505,
+    "paired": 78,
+    "median": 0.08749999999999997
+  },
+  {
+    "date": "2026-06-29",
+    "side": "Call",
+    "denominator": 88,
+    "mid_only": 26,
+    "percent": 29.545454545454547,
+    "paired": 62,
+    "median": 0.05499999999999994
+  },
+  {
+    "date": "2026-06-29",
+    "side": "Put",
+    "denominator": 88,
+    "mid_only": 16,
+    "percent": 18.181818181818183,
+    "paired": 69,
+    "median": 0.04499999999999993
+  },
+  {
+    "date": "2026-06-30",
+    "side": "Call",
+    "denominator": 88,
+    "mid_only": 35,
+    "percent": 39.77272727272727,
+    "paired": 53,
+    "median": 0.03499999999999992
+  },
+  {
+    "date": "2026-06-30",
+    "side": "Put",
+    "denominator": 88,
+    "mid_only": 22,
+    "percent": 25.0,
+    "paired": 64,
+    "median": 0.04249999999999998
+  },
+  {
+    "date": "2026-07-01",
+    "side": "Call",
+    "denominator": 88,
+    "mid_only": 32,
+    "percent": 36.36363636363637,
+    "paired": 55,
+    "median": 0.04999999999999982
+  },
+  {
+    "date": "2026-07-01",
+    "side": "Put",
+    "denominator": 88,
+    "mid_only": 20,
+    "percent": 22.727272727272727,
+    "paired": 66,
+    "median": 0.04499999999999993
+  },
+  {
+    "date": "2026-07-02",
+    "side": "Call",
+    "denominator": 105,
+    "mid_only": 34,
+    "percent": 32.38095238095238,
+    "paired": 69,
+    "median": 0.039999999999999994
+  },
+  {
+    "date": "2026-07-02",
+    "side": "Put",
+    "denominator": 105,
+    "mid_only": 27,
+    "percent": 25.714285714285715,
+    "paired": 76,
+    "median": 0.027500000000000163
+  },
+  {
+    "date": "2026-07-06",
+    "side": "Call",
+    "denominator": 107,
+    "mid_only": 27,
+    "percent": 25.233644859813083,
+    "paired": 75,
+    "median": 0.024999999999999994
+  },
+  {
+    "date": "2026-07-06",
+    "side": "Put",
+    "denominator": 107,
+    "mid_only": 17,
+    "percent": 15.88785046728972,
+    "paired": 88,
+    "median": 0.0525000000000001
+  },
+  {
+    "date": "2026-07-07",
+    "side": "Call",
+    "denominator": 107,
+    "mid_only": 21,
+    "percent": 19.626168224299064,
+    "paired": 76,
+    "median": 0.02499999999999991
+  },
+  {
+    "date": "2026-07-07",
+    "side": "Put",
+    "denominator": 107,
+    "mid_only": 14,
+    "percent": 13.08411214953271,
+    "paired": 91,
+    "median": 0.040000000000000036
+  },
+  {
+    "date": "2026-07-08",
+    "side": "Call",
+    "denominator": 107,
+    "mid_only": 19,
+    "percent": 17.757009345794394,
+    "paired": 78,
+    "median": 0.022500000000000006
+  },
+  {
+    "date": "2026-07-08",
+    "side": "Put",
+    "denominator": 107,
+    "mid_only": 26,
+    "percent": 24.299065420560748,
+    "paired": 79,
+    "median": 0.05000000000000002
+  },
+  {
+    "date": "2026-07-09",
+    "side": "Call",
+    "denominator": 123,
+    "mid_only": 36,
+    "percent": 29.26829268292683,
+    "paired": 74,
+    "median": 0.020000000000000018
+  },
+  {
+    "date": "2026-07-09",
+    "side": "Put",
+    "denominator": 123,
+    "mid_only": 41,
+    "percent": 33.333333333333336,
+    "paired": 79,
+    "median": 0.039999999999999925
+  },
+  {
+    "date": "2026-07-10",
+    "side": "Call",
+    "denominator": 125,
+    "mid_only": 36,
+    "percent": 28.8,
+    "paired": 73,
+    "median": 0.03500000000000003
+  },
+  {
+    "date": "2026-07-10",
+    "side": "Put",
+    "denominator": 124,
+    "mid_only": 35,
+    "percent": 28.225806451612904,
+    "paired": 81,
+    "median": 0.044999999999999984
+  },
+  {
+    "date": "2026-07-13",
+    "side": "Call",
+    "denominator": 109,
+    "mid_only": 34,
+    "percent": 31.192660550458715,
+    "paired": 63,
+    "median": 0.020000000000000018
+  },
+  {
+    "date": "2026-07-13",
+    "side": "Put",
+    "denominator": 109,
+    "mid_only": 21,
+    "percent": 19.26605504587156,
+    "paired": 88,
+    "median": 0.03750000000000009
+  },
+  {
+    "date": "2026-07-14",
+    "side": "Call",
+    "denominator": 109,
+    "mid_only": 35,
+    "percent": 32.11009174311926,
+    "paired": 62,
+    "median": 0.024999999999999953
+  },
+  {
+    "date": "2026-07-14",
+    "side": "Put",
+    "denominator": 109,
+    "mid_only": 35,
+    "percent": 32.11009174311926,
+    "paired": 71,
+    "median": 0.03000000000000025
+  },
+  {
+    "date": "2026-07-15",
+    "side": "Call",
+    "denominator": 109,
+    "mid_only": 24,
+    "percent": 22.01834862385321,
+    "paired": 69,
+    "median": 0.020000000000000018
+  },
+  {
+    "date": "2026-07-15",
+    "side": "Put",
+    "denominator": 109,
+    "mid_only": 25,
+    "percent": 22.93577981651376,
+    "paired": 83,
+    "median": 0.034999999999999976
+  },
+  {
+    "date": "2026-07-16",
+    "side": "Call",
+    "denominator": 109,
+    "mid_only": 15,
+    "percent": 13.761467889908257,
+    "paired": 65,
+    "median": 0.030000000000000027
+  },
+  {
+    "date": "2026-07-16",
+    "side": "Put",
+    "denominator": 109,
+    "mid_only": 24,
+    "percent": 22.01834862385321,
+    "paired": 85,
+    "median": 0.029999999999999805
+  },
+  {
+    "date": "2026-07-17",
+    "side": "Call",
+    "denominator": 109,
+    "mid_only": 17,
+    "percent": 15.596330275229358,
+    "paired": 60,
+    "median": 0.015000000000000008
+  },
+  {
+    "date": "2026-07-17",
+    "side": "Put",
+    "denominator": 109,
+    "mid_only": 33,
+    "percent": 30.275229357798164,
+    "paired": 74,
+    "median": 0.04499999999999993
+  },
+  {
+    "date": "2026-07-20",
+    "side": "Call",
+    "denominator": 100,
+    "mid_only": 13,
+    "percent": 13.0,
+    "paired": 66,
+    "median": 0.01999999999999995
+  },
+  {
+    "date": "2026-07-20",
+    "side": "Put",
+    "denominator": 100,
+    "mid_only": 18,
+    "percent": 18.0,
+    "paired": 82,
+    "median": 0.06999999999999984
+  },
+  {
+    "date": "2026-07-21",
+    "side": "Call",
+    "denominator": 100,
+    "mid_only": 16,
+    "percent": 16.0,
+    "paired": 64,
+    "median": 0.015000000000000013
+  },
+  {
+    "date": "2026-07-21",
+    "side": "Put",
+    "denominator": 100,
+    "mid_only": 30,
+    "percent": 30.0,
+    "paired": 69,
+    "median": 0.039999999999999925
+  },
+  {
+    "date": "2026-07-22",
+    "side": "Call",
+    "denominator": 100,
+    "mid_only": 17,
+    "percent": 17.0,
+    "paired": 61,
+    "median": 0.035
+  },
+  {
+    "date": "2026-07-22",
+    "side": "Put",
+    "denominator": 100,
+    "mid_only": 26,
+    "percent": 26.0,
+    "paired": 74,
+    "median": 0.05750000000000011
+  },
+  {
+    "date": "2026-07-23",
+    "side": "Call",
+    "denominator": 114,
+    "mid_only": 45,
+    "percent": 39.473684210526315,
+    "paired": 45,
+    "median": 0.019999999999999962
+  },
+  {
+    "date": "2026-07-23",
+    "side": "Put",
+    "denominator": 115,
+    "mid_only": 52,
+    "percent": 45.21739130434783,
+    "paired": 62,
+    "median": 0.057499999999999774
+  },
+  {
+    "date": "2026-07-24",
+    "side": "Call",
+    "denominator": 114,
+    "mid_only": 29,
+    "percent": 25.43859649122807,
+    "paired": 47,
+    "median": 0.024999999999999967
+  },
+  {
+    "date": "2026-07-24",
+    "side": "Put",
+    "denominator": 116,
+    "mid_only": 43,
+    "percent": 37.06896551724138,
+    "paired": 71,
+    "median": 0.05500000000000005
+  },
+  {
+    "date": "2026-07-27",
+    "side": "Call",
+    "denominator": 98,
+    "mid_only": 26,
+    "percent": 26.53061224489796,
+    "paired": 55,
+    "median": 0.025000000000000022
+  },
+  {
+    "date": "2026-07-27",
+    "side": "Put",
+    "denominator": 99,
+    "mid_only": 33,
+    "percent": 33.333333333333336,
+    "paired": 66,
+    "median": 0.0575000000000003
+  },
+  {
+    "date": "2026-07-28",
+    "side": "Call",
+    "denominator": 98,
+    "mid_only": 16,
+    "percent": 16.3265306122449,
+    "paired": 54,
+    "median": 0.01999999999999998
+  },
+  {
+    "date": "2026-07-28",
+    "side": "Put",
+    "denominator": 99,
+    "mid_only": 33,
+    "percent": 33.333333333333336,
+    "paired": 66,
+    "median": 0.0475000000000001
+  },
+  {
+    "date": "2026-07-29",
+    "side": "Call",
+    "denominator": 98,
+    "mid_only": 20,
+    "percent": 20.408163265306122,
+    "paired": 48,
+    "median": 0.025
+  },
+  {
+    "date": "2026-07-29",
+    "side": "Put",
+    "denominator": 99,
+    "mid_only": 34,
+    "percent": 34.343434343434346,
+    "paired": 65,
+    "median": 0.16000000000000014
+  },
+  {
+    "date": "2026-07-30",
+    "side": "Call",
+    "denominator": 98,
+    "mid_only": 20,
+    "percent": 20.408163265306122,
+    "paired": 55,
+    "median": 0.025000000000000022
+  },
+  {
+    "date": "2026-07-30",
+    "side": "Put",
+    "denominator": 99,
+    "mid_only": 33,
+    "percent": 33.333333333333336,
+    "paired": 66,
+    "median": 0.1324999999999999
+  },
+  {
+    "date": "2026-07-31",
+    "side": "Call",
+    "denominator": 99,
+    "mid_only": 15,
+    "percent": 15.151515151515152,
+    "paired": 54,
+    "median": 0.015000000000000013
+  },
+  {
+    "date": "2026-07-31",
+    "side": "Put",
+    "denominator": 99,
+    "mid_only": 37,
+    "percent": 37.37373737373738,
+    "paired": 60,
+    "median": 0.040000000000000036
+  },
+  {
+    "date": "2026-08-03",
+    "side": "Call",
+    "denominator": 82,
+    "mid_only": 8,
+    "percent": 9.75609756097561,
+    "paired": 61,
+    "median": 0.015000000000000013
+  },
+  {
+    "date": "2026-08-03",
+    "side": "Put",
+    "denominator": 82,
+    "mid_only": 23,
+    "percent": 28.048780487804876,
+    "paired": 59,
+    "median": 0.040000000000000036
+  },
+  {
+    "date": "2026-08-04",
+    "side": "Call",
+    "denominator": 82,
+    "mid_only": 9,
+    "percent": 10.975609756097562,
+    "paired": 64,
+    "median": 0.025000000000000022
+  },
+  {
+    "date": "2026-08-04",
+    "side": "Put",
+    "denominator": 82,
+    "mid_only": 21,
+    "percent": 25.609756097560975,
+    "paired": 61,
+    "median": 0.04999999999999982
+  },
+  {
+    "date": "2026-08-05",
+    "side": "Call",
+    "denominator": 82,
+    "mid_only": 10,
+    "percent": 12.195121951219512,
+    "paired": 62,
+    "median": 0.05500000000000005
+  },
+  {
+    "date": "2026-08-05",
+    "side": "Put",
+    "denominator": 82,
+    "mid_only": 28,
+    "percent": 34.146341463414636,
+    "paired": 54,
+    "median": 0.07000000000000006
+  },
+  {
+    "date": "2026-08-06",
+    "side": "Call",
+    "denominator": 82,
+    "mid_only": 12,
+    "percent": 14.634146341463415,
+    "paired": 56,
+    "median": 0.019999999999999976
+  },
+  {
+    "date": "2026-08-06",
+    "side": "Put",
+    "denominator": 82,
+    "mid_only": 20,
+    "percent": 24.390243902439025,
+    "paired": 60,
+    "median": 0.024999999999999953
+  },
+  {
+    "date": "2026-08-07",
+    "side": "Call",
+    "denominator": 82,
+    "mid_only": 4,
+    "percent": 4.878048780487805,
+    "paired": 68,
+    "median": 0.029999999999999902
+  },
+  {
+    "date": "2026-08-07",
+    "side": "Put",
+    "denominator": 82,
+    "mid_only": 16,
+    "percent": 19.51219512195122,
+    "paired": 57,
+    "median": 0.040000000000000036
+  },
+  {
+    "date": "2026-08-10",
+    "side": "Call",
+    "denominator": 67,
+    "mid_only": 4,
+    "percent": 5.970149253731344,
+    "paired": 60,
+    "median": 0.030000000000000027
+  },
+  {
+    "date": "2026-08-10",
+    "side": "Put",
+    "denominator": 67,
+    "mid_only": 11,
+    "percent": 16.417910447761194,
+    "paired": 51,
+    "median": 0.02500000000000001
+  },
+  {
+    "date": "2026-08-11",
+    "side": "Call",
+    "denominator": 67,
+    "mid_only": 4,
+    "percent": 5.970149253731344,
+    "paired": 58,
+    "median": 0.04500000000000015
+  },
+  {
+    "date": "2026-08-11",
+    "side": "Put",
+    "denominator": 67,
+    "mid_only": 15,
+    "percent": 22.388059701492537,
+    "paired": 45,
+    "median": 0.05499999999999999
+  },
+  {
+    "date": "2026-08-12",
+    "side": "Call",
+    "denominator": 67,
+    "mid_only": 11,
+    "percent": 16.417910447761194,
+    "paired": 50,
+    "median": 0.05000000000000008
+  },
+  {
+    "date": "2026-08-12",
+    "side": "Put",
+    "denominator": 67,
+    "mid_only": 17,
+    "percent": 25.37313432835821,
+    "paired": 40,
+    "median": 0.030000000000000013
+  },
+  {
+    "date": "2026-08-13",
+    "side": "Call",
+    "denominator": 67,
+    "mid_only": 15,
+    "percent": 22.388059701492537,
+    "paired": 47,
+    "median": 0.03999999999999998
+  },
+  {
+    "date": "2026-08-13",
+    "side": "Put",
+    "denominator": 67,
+    "mid_only": 15,
+    "percent": 22.388059701492537,
+    "paired": 40,
+    "median": 0.03499999999999995
+  },
+  {
+    "date": "2026-08-14",
+    "side": "Call",
+    "denominator": 67,
+    "mid_only": 7,
+    "percent": 10.447761194029852,
+    "paired": 51,
+    "median": 0.024999999999999994
+  },
+  {
+    "date": "2026-08-14",
+    "side": "Put",
+    "denominator": 67,
+    "mid_only": 11,
+    "percent": 16.417910447761194,
+    "paired": 36,
+    "median": 0.020000000000000018
+  },
+  {
+    "date": "2026-08-17",
+    "side": "Call",
+    "denominator": 51,
+    "mid_only": 4,
+    "percent": 7.8431372549019605,
+    "paired": 44,
+    "median": 0.039999999999999925
+  },
+  {
+    "date": "2026-08-17",
+    "side": "Put",
+    "denominator": 51,
+    "mid_only": 4,
+    "percent": 7.8431372549019605,
+    "paired": 36,
+    "median": 0.025000000000000022
+  },
+  {
+    "date": "2026-08-18",
+    "side": "Call",
+    "denominator": 51,
+    "mid_only": 5,
+    "percent": 9.803921568627452,
+    "paired": 41,
+    "median": 0.030000000000000006
+  },
+  {
+    "date": "2026-08-18",
+    "side": "Put",
+    "denominator": 51,
+    "mid_only": 6,
+    "percent": 11.764705882352942,
+    "paired": 37,
+    "median": 0.010000000000000009
+  },
+  {
+    "date": "2026-08-19",
+    "side": "Call",
+    "denominator": 51,
+    "mid_only": 6,
+    "percent": 11.764705882352942,
+    "paired": 40,
+    "median": 0.06999999999999995
+  },
+  {
+    "date": "2026-08-19",
+    "side": "Put",
+    "denominator": 51,
+    "mid_only": 7,
+    "percent": 13.72549019607843,
+    "paired": 33,
+    "median": 0.045000000000000005
+  },
+  {
+    "date": "2026-08-20",
+    "side": "Call",
+    "denominator": 51,
+    "mid_only": 7,
+    "percent": 13.72549019607843,
+    "paired": 33,
+    "median": 0.040000000000000036
+  },
+  {
+    "date": "2026-08-20",
+    "side": "Put",
+    "denominator": 51,
+    "mid_only": 6,
+    "percent": 11.764705882352942,
+    "paired": 38,
+    "median": 0.07749999999999985
+  },
+  {
+    "date": "2026-08-21",
+    "side": "Call",
+    "denominator": 51,
+    "mid_only": 3,
+    "percent": 5.882352941176471,
+    "paired": 41,
+    "median": 0.030000000000000027
+  },
+  {
+    "date": "2026-08-21",
+    "side": "Put",
+    "denominator": 51,
+    "mid_only": 7,
+    "percent": 13.72549019607843,
+    "paired": 26,
+    "median": 0.02500000000000001
+  },
+  {
+    "date": "2026-08-24",
+    "side": "Call",
+    "denominator": 34,
+    "mid_only": 1,
+    "percent": 2.9411764705882355,
+    "paired": 33,
+    "median": 0.03
+  },
+  {
+    "date": "2026-08-24",
+    "side": "Put",
+    "denominator": 34,
+    "mid_only": 3,
+    "percent": 8.823529411764707,
+    "paired": 25,
+    "median": 0.02499999999999991
+  },
+  {
+    "date": "2026-08-25",
+    "side": "Call",
+    "denominator": 34,
+    "mid_only": 2,
+    "percent": 5.882352941176471,
+    "paired": 32,
+    "median": 0.027500000000000302
+  },
+  {
+    "date": "2026-08-25",
+    "side": "Put",
+    "denominator": 34,
+    "mid_only": 4,
+    "percent": 11.764705882352942,
+    "paired": 21,
+    "median": 0.015000000000000013
+  },
+  {
+    "date": "2026-08-26",
+    "side": "Call",
+    "denominator": 34,
+    "mid_only": 5,
+    "percent": 14.705882352941176,
+    "paired": 29,
+    "median": 0.024999999999999994
+  },
+  {
+    "date": "2026-08-26",
+    "side": "Put",
+    "denominator": 34,
+    "mid_only": 4,
+    "percent": 11.764705882352942,
+    "paired": 21,
+    "median": 0.025000000000000022
+  },
+  {
+    "date": "2026-08-27",
+    "side": "Call",
+    "denominator": 34,
+    "mid_only": 3,
+    "percent": 8.823529411764707,
+    "paired": 28,
+    "median": 0.030000000000000138
+  },
+  {
+    "date": "2026-08-27",
+    "side": "Put",
+    "denominator": 34,
+    "mid_only": 6,
+    "percent": 17.647058823529413,
+    "paired": 17,
+    "median": 0.010000000000000009
+  },
+  {
+    "date": "2026-08-28",
+    "side": "Call",
+    "denominator": 34,
+    "mid_only": 2,
+    "percent": 5.882352941176471,
+    "paired": 23,
+    "median": 0.04499999999999993
+  },
+  {
+    "date": "2026-08-28",
+    "side": "Put",
+    "denominator": 34,
+    "mid_only": 0,
+    "percent": 0.0,
+    "paired": 22,
+    "median": 0.04249999999999998
+  },
+  {
+    "date": "2026-08-31",
+    "side": "Call",
+    "denominator": 17,
+    "mid_only": 0,
+    "percent": 0.0,
+    "paired": 16,
+    "median": 0.010000000000000064
+  },
+  {
+    "date": "2026-08-31",
+    "side": "Put",
+    "denominator": 17,
+    "mid_only": 0,
+    "percent": 0.0,
+    "paired": 13,
+    "median": 0.014999999999999986
+  },
+  {
+    "date": "2026-09-01",
+    "side": "Call",
+    "denominator": 17,
+    "mid_only": 1,
+    "percent": 5.882352941176471,
+    "paired": 14,
+    "median": 0.04749999999999999
+  },
+  {
+    "date": "2026-09-01",
+    "side": "Put",
+    "denominator": 17,
+    "mid_only": 0,
+    "percent": 0.0,
+    "paired": 12,
+    "median": 0.020000000000000018
+  },
+  {
+    "date": "2026-09-02",
+    "side": "Call",
+    "denominator": 17,
+    "mid_only": 0,
+    "percent": 0.0,
+    "paired": 12,
+    "median": 0.030000000000000027
+  },
+  {
+    "date": "2026-09-02",
+    "side": "Put",
+    "denominator": 17,
+    "mid_only": 3,
+    "percent": 17.647058823529413,
+    "paired": 10,
+    "median": 0.07250000000000004
+  },
+  {
+    "date": "2026-09-03",
+    "side": "Call",
+    "denominator": 17,
+    "mid_only": 1,
+    "percent": 5.882352941176471,
+    "paired": 10,
+    "median": 0.019999999999999962
+  },
+  {
+    "date": "2026-09-03",
+    "side": "Put",
+    "denominator": 17,
+    "mid_only": 1,
+    "percent": 5.882352941176471,
+    "paired": 10,
+    "median": 0.07500000000000001
+  },
+  {
+    "date": "2026-09-04",
+    "side": "Call",
+    "denominator": 17,
+    "mid_only": 0,
+    "percent": 0.0,
+    "paired": 8,
+    "median": 0.03499999999999992
+  },
+  {
+    "date": "2026-09-04",
+    "side": "Put",
+    "denominator": 17,
+    "mid_only": 5,
+    "percent": 29.41176470588235,
+    "paired": 4,
+    "median": 0.03999999999999998
+  }
+]
