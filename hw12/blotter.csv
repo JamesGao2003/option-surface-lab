@@ -1,0 +1,21 @@
+id,time,instrument,side,qty,limit,fill,cash_delta,cash_after,note,group
+1,2026-07-13T15:00:00Z,AAPL.O,BUY,100,,319.075,-31907.5,-1907.5,ENTRY: flat → buy 100 shares; covered combo passed Reg T.,2026-07-17
+2,2026-07-13T15:00:00Z,AAPLG172632000.U^G26,SELL,1,3.25,3.25,325.0,-1582.5,WRITE: smallest quoted strike ≥ spot on $2.50 grid; Friday expiry; simulated limit at contemporaneous mid.,2026-07-17
+3,2026-07-17T20:00:00Z,AAPLG172632000.U^G26,ASSIGN,1,,0,0,-1582.5,EXPIRY ITM: remove short call through physical assignment; stock proceeds recorded once on paired SELL.,2026-07-17
+4,2026-07-17T20:00:00Z,AAPL.O,SELL,100,,320.0,32000.0,30417.5,ASSIGNMENT DELIVERY: sell covered 100 shares at strike; book becomes flat.,2026-07-17
+5,2026-07-20T15:00:00Z,AAPL.O,BUY,100,,326.42,-32642.0,-2224.5,ENTRY: flat → buy 100 shares; covered combo passed Reg T.,2026-07-24
+6,2026-07-20T15:00:00Z,AAPLG242632750.U^G26,SELL,1,4.15,4.15,415.00000000000006,-1809.5,WRITE: smallest quoted strike ≥ spot on $2.50 grid; Friday expiry; simulated limit at contemporaneous mid.,2026-07-24
+7,2026-07-24T20:00:00Z,AAPLG242632750.U^G26,ASSIGN,1,,0,0,-1809.5,EXPIRY ITM: remove short call through physical assignment; stock proceeds recorded once on paired SELL.,2026-07-24
+8,2026-07-24T20:00:00Z,AAPL.O,SELL,100,,327.5,32750.0,30940.5,ASSIGNMENT DELIVERY: sell covered 100 shares at strike; book becomes flat.,2026-07-24
+9,2026-07-27T15:00:00Z,AAPL.O,BUY,100,,338.21,-33821.0,-2880.5,ENTRY: flat → buy 100 shares; covered combo passed Reg T.,2026-07-31
+10,2026-07-27T15:00:00Z,AAPLG312634000.U^G26,SELL,1,6.025,6.025,602.5,-2278.0,WRITE: smallest quoted strike ≥ spot on $2.50 grid; Friday expiry; simulated limit at contemporaneous mid.,2026-07-31
+11,2026-07-31T20:00:00Z,AAPLG312634000.U^G26,EXPIRE,1,,0,0,-2278.0,EXPIRY OTM/ATM: call expires at zero; keep the existing 100 shares. Exact ATM treated as unexercised.,2026-07-31
+12,2026-08-10T15:00:00Z,AAPLH142630750.U^H26,SELL,1,3.5,3.5,350.0,-1928.0,WRITE: smallest quoted strike ≥ spot on $2.50 grid; Friday expiry; simulated limit at contemporaneous mid.,2026-08-14
+13,2026-08-14T20:00:00Z,AAPLH142630750.U^H26,EXPIRE,1,,0,0,-1928.0,EXPIRY OTM/ATM: call expires at zero; keep the existing 100 shares. Exact ATM treated as unexercised.,2026-08-14
+14,2026-08-17T15:00:00Z,AAPLH212630500.U^H26,SELL,1,2.73,2.73,273.0,-1655.0,WRITE: smallest quoted strike ≥ spot on $2.50 grid; Friday expiry; simulated limit at contemporaneous mid.,2026-08-21
+15,2026-08-21T20:00:00Z,AAPLH212630500.U^H26,ASSIGN,1,,0,0,-1655.0,EXPIRY ITM: remove short call through physical assignment; stock proceeds recorded once on paired SELL.,2026-08-21
+16,2026-08-21T20:00:00Z,AAPL.O,SELL,100,,305.0,30500.0,28845.0,ASSIGNMENT DELIVERY: sell covered 100 shares at strike; book becomes flat.,2026-08-21
+17,2026-08-24T15:00:00Z,AAPL.O,BUY,100,,312.97,-31297.000000000004,-2452.0000000000036,ENTRY: flat → buy 100 shares; covered combo passed Reg T.,2026-08-28
+18,2026-08-24T15:00:00Z,AAPLH282631500.U^H26,SELL,1,2.675,2.675,267.5,-2184.5000000000036,WRITE: smallest quoted strike ≥ spot on $2.50 grid; Friday expiry; simulated limit at contemporaneous mid.,2026-08-28
+19,2026-08-28T20:00:00Z,AAPLH282631500.U^H26,ASSIGN,1,,0,0,-2184.5000000000036,EXPIRY ITM: remove short call through physical assignment; stock proceeds recorded once on paired SELL.,2026-08-28
+20,2026-08-28T20:00:00Z,AAPL.O,SELL,100,,315.0,31500.0,29315.499999999996,ASSIGNMENT DELIVERY: sell covered 100 shares at strike; book becomes flat.,2026-08-28

@@ -1,0 +1,11 @@
+time,expiry,status,ric,reason,spot,strike,mid,bid,ask,available_after
+2026-07-13T15:00:00Z,2026-07-17,FILLED,AAPLG172632000.U^G26,Covered call written at mid; buy stock only when flat.,319.075,320.0,3.25,3.15,3.35,14046.25
+2026-07-20T15:00:00Z,2026-07-24,FILLED,AAPLG242632750.U^G26,Covered call written at mid; buy stock only when flat.,326.42,327.5,4.15,4.05,4.25,14096.5
+2026-07-27T15:00:00Z,2026-07-31,FILLED,AAPLG312634000.U^G26,Covered call written at mid; buy stock only when flat.,338.21,340.0,6.025,5.95,6.1,14030.0
+2026-08-03T15:00:00Z,2026-08-07,SKIP,,"No contemporaneous positive, non-crossed BID/ASK on the declared OTM strike grid; week skipped.",305.3488,,,,,
+2026-08-10T15:00:00Z,2026-08-14,FILLED,AAPLH142630750.U^H26,Covered call written at mid; buy stock only when flat.,307.134,307.5,3.5,3.4,3.6,13078.7
+2026-08-17T15:00:00Z,2026-08-21,FILLED,AAPLH212630500.U^H26,Covered call written at mid; buy stock only when flat.,304.13,305.0,2.73,2.7,2.76,13278.5
+2026-08-24T15:00:00Z,2026-08-28,FILLED,AAPLH282631500.U^H26,Covered call written at mid; buy stock only when flat.,312.97,315.0,2.675,2.65,2.7,13196.499999999998
+2026-08-31T15:00:00Z,2026-09-04,SKIP,,"No contemporaneous positive, non-crossed BID/ASK on the declared OTM strike grid; week skipped.",315.38,,,,,
+2026-09-07T15:00:00Z,2026-09-11,SKIP,,No stock print at fixed Monday decision time (holiday or missing tape); no delayed entry.,,,,,,
+2026-09-14T15:00:00Z,2026-09-18,SKIP,,"No contemporaneous positive, non-crossed BID/ASK on the declared OTM strike grid; week skipped.",332.9943,,,,,

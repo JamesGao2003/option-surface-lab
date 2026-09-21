@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+hw12_lseg_checkpoint.*
+hw12_results/
+HW12_results.zip

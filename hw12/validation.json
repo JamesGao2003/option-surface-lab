@@ -1,0 +1,21 @@
+{
+  "result": "PASS",
+  "source_sha256": "be118521c9c6b1651df61f5b02c8621541f671f11d7fd4a77cace36c6a752ccb",
+  "blotter_events": 20,
+  "ledger_rows": 349,
+  "paired_observations": 1766,
+  "independent_ols": {
+    "slope": 0.9999843799406313,
+    "intercept": 0.0008233322868658407,
+    "r2": 0.9990715104308459
+  },
+  "stock_cash_pnl": -2917.5000000000036,
+  "minimum_available": 12891.999999999998,
+  "minimum_excess": 20476.999999999996,
+  "minimum_recorded_cash": -2278.0,
+  "limitations": [
+    "27 candidate requests failed; no-data errors do not prove unlisted contracts or absent markets.",
+    "6 recorded option marks are missing; drawdown is measured on observed NAV only.",
+    "Full original tape was not supplied; exhaustive chain coverage, every candidate and bar-level freshness cannot be independently established."
+  ]
+}

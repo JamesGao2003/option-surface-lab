@@ -1,0 +1,109 @@
+ric,status,rows,error
+AAPLG172631250.U^G26,observed,40,
+AAPLG172631500.U^G26,observed,40,
+AAPLG172631750.U^G26,observed,40,
+AAPLG172632000.U^G26,observed,40,
+AAPLG172632250.U^G26,observed,40,
+AAPLG172632500.U^G26,observed,40,
+AAPLG172632750.U^G26,observed,39,
+AAPLG172633000.U^G26,observed,40,
+AAPLG172633250.U^G26,observed,40,
+AAPLG242632000.U^G26,observed,40,
+AAPLG242632250.U^G26,observed,40,
+AAPLG242632500.U^G26,observed,40,
+AAPLG242632750.U^G26,observed,40,
+AAPLG242633000.U^G26,observed,40,
+AAPLG242633250.U^G26,observed,40,
+AAPLG242633500.U^G26,observed,40,
+AAPLG242633750.U^G26,observed,39,
+AAPLG242634000.U^G26,observed,40,
+AAPLG312633250.U^G26,observed,40,
+AAPLG312633500.U^G26,observed,40,
+AAPLG312633750.U^G26,observed,40,
+AAPLG312634000.U^G26,observed,39,
+AAPLG312634250.U^G26,observed,39,
+AAPLG312634500.U^G26,observed,40,
+AAPLG312634750.U^G26,observed,40,
+AAPLG312635000.U^G26,observed,39,
+AAPLG312635250.U^G26,observed,40,
+AAPLH72630000.U^H26,error,0,"Error code 1 | No data to return, please check errors: ERROR: No successful response.
+(TS.Intraday.UserRequestError.90001, AAPLH72630000)"
+AAPLH72630250.U^H26,error,0,"Error code 1 | No data to return, please check errors: ERROR: No successful response.
+(TS.Intraday.UserRequestError.90001, AAPLH72630250)"
+AAPLH72630500.U^H26,error,0,"Error code 1 | No data to return, please check errors: ERROR: No successful response.
+(TS.Intraday.UserRequestError.90001, AAPLH72630500)"
+AAPLH72630750.U^H26,error,0,"Error code 1 | No data to return, please check errors: ERROR: No successful response.
+(TS.Intraday.UserRequestError.90001, AAPLH72630750)"
+AAPLH72631000.U^H26,error,0,"Error code 1 | No data to return, please check errors: ERROR: No successful response.
+(TS.Intraday.UserRequestError.90001, AAPLH72631000)"
+AAPLH72631250.U^H26,error,0,"Error code 1 | No data to return, please check errors: ERROR: No successful response.
+(TS.Intraday.UserRequestError.90001, AAPLH72631250)"
+AAPLH72631500.U^H26,error,0,"Error code 1 | No data to return, please check errors: ERROR: No successful response.
+(TS.Intraday.UserRequestError.90001, AAPLH72631500)"
+AAPLH72631750.U^H26,error,0,"Error code 1 | No data to return, please check errors: ERROR: No successful response.
+(TS.Intraday.UserRequestError.90001, AAPLH72631750)"
+AAPLH72632000.U^H26,error,0,"Error code 1 | No data to return, please check errors: ERROR: No successful response.
+(TS.Intraday.UserRequestError.90001, AAPLH72632000)"
+AAPLH142630000.U^H26,observed,40,
+AAPLH142630250.U^H26,observed,40,
+AAPLH142630500.U^H26,observed,40,
+AAPLH142630750.U^H26,observed,40,
+AAPLH142631000.U^H26,observed,40,
+AAPLH142631250.U^H26,observed,39,
+AAPLH142631500.U^H26,observed,39,
+AAPLH142631750.U^H26,observed,40,
+AAPLH142632000.U^H26,observed,39,
+AAPLH212629750.U^H26,observed,40,
+AAPLH212630000.U^H26,observed,40,
+AAPLH212630250.U^H26,observed,40,
+AAPLH212630500.U^H26,observed,40,
+AAPLH212630750.U^H26,observed,40,
+AAPLH212631000.U^H26,observed,40,
+AAPLH212631250.U^H26,observed,39,
+AAPLH212631500.U^H26,observed,40,
+AAPLH212631750.U^H26,observed,40,
+AAPLH282630750.U^H26,observed,40,
+AAPLH282631000.U^H26,observed,40,
+AAPLH282631250.U^H26,observed,40,
+AAPLH282631500.U^H26,observed,40,
+AAPLH282631750.U^H26,observed,40,
+AAPLH282632000.U^H26,observed,40,
+AAPLH282632250.U^H26,observed,40,
+AAPLH282632500.U^H26,observed,39,
+AAPLH282632750.U^H26,observed,40,
+AAPLI42631000.U^I26,error,0,"Error code 1 | No data to return, please check errors: ERROR: No successful response.
+(TS.Intraday.UserRequestError.90001, AAPLI42631000)"
+AAPLI42631250.U^I26,error,0,"Error code 1 | No data to return, please check errors: ERROR: No successful response.
+(TS.Intraday.UserRequestError.90001, AAPLI42631250)"
+AAPLI42631500.U^I26,error,0,"Error code 1 | No data to return, please check errors: ERROR: No successful response.
+(TS.Intraday.UserRequestError.90001, AAPLI42631500)"
+AAPLI42631750.U^I26,error,0,"Error code 1 | No data to return, please check errors: ERROR: No successful response.
+(TS.Intraday.UserRequestError.90001, AAPLI42631750)"
+AAPLI42632000.U^I26,error,0,"Error code 1 | No data to return, please check errors: ERROR: No successful response.
+(TS.Intraday.UserRequestError.90001, AAPLI42632000)"
+AAPLI42632250.U^I26,error,0,"Error code 1 | No data to return, please check errors: ERROR: No successful response.
+(TS.Intraday.UserRequestError.90001, AAPLI42632250)"
+AAPLI42632500.U^I26,error,0,"Error code 1 | No data to return, please check errors: ERROR: No successful response.
+(TS.Intraday.UserRequestError.90001, AAPLI42632500)"
+AAPLI42632750.U^I26,error,0,"Error code 1 | No data to return, please check errors: ERROR: No successful response.
+(TS.Intraday.UserRequestError.90001, AAPLI42632750)"
+AAPLI42633000.U^I26,error,0,"Error code 1 | No data to return, please check errors: ERROR: No successful response.
+(TS.Intraday.UserRequestError.90001, AAPLI42633000)"
+AAPLI182632750.U^I26,error,0,"Error code 1 | No data to return, please check errors: ERROR: No successful response.
+(TS.Intraday.UserRequestError.90001, AAPLI182632750)"
+AAPLI182633000.U^I26,error,0,"Error code 1 | No data to return, please check errors: ERROR: No successful response.
+(TS.Intraday.UserRequestError.90001, AAPLI182633000)"
+AAPLI182633250.U^I26,error,0,"Error code 1 | No data to return, please check errors: ERROR: No successful response.
+(TS.Intraday.UserRequestError.90001, AAPLI182633250)"
+AAPLI182633500.U^I26,error,0,"Error code 1 | No data to return, please check errors: ERROR: No successful response.
+(TS.Intraday.UserRequestError.90001, AAPLI182633500)"
+AAPLI182633750.U^I26,error,0,"Error code 1 | No data to return, please check errors: ERROR: No successful response.
+(TS.Intraday.UserRequestError.90001, AAPLI182633750)"
+AAPLI182634000.U^I26,error,0,"Error code 1 | No data to return, please check errors: ERROR: No successful response.
+(TS.Intraday.UserRequestError.90001, AAPLI182634000)"
+AAPLI182634250.U^I26,error,0,"Error code 1 | No data to return, please check errors: ERROR: No successful response.
+(TS.Intraday.UserRequestError.90001, AAPLI182634250)"
+AAPLI182634500.U^I26,error,0,"Error code 1 | No data to return, please check errors: ERROR: No successful response.
+(TS.Intraday.UserRequestError.90001, AAPLI182634500)"
+AAPLI182634750.U^I26,error,0,"Error code 1 | No data to return, please check errors: ERROR: No successful response.
+(TS.Intraday.UserRequestError.90001, AAPLI182634750)"
