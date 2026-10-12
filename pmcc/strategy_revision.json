@@ -1,0 +1,12 @@
+{
+  "version": "pmcc-hourly-profit-target-1.0",
+  "recorded_utc": "2026-10-12T18:55:53.450967+00:00",
+  "original_source_sha256": "963eaf08dc5fd870c2ac51a3d75f1f393f97614e15511a42a828d4768f305ef9",
+  "reason": "Retrospective operational-rule revision after seven missing bid/ask observations were confirmed. This is a different strategy, not a repaired dataset or an out-of-sample result.",
+  "short_take_profit_ask_ratio": 0.5,
+  "trigger": "At each regular hourly observation after entry (10:00 through 16:00 America/New_York), buy back at observed ASK when ASK <= 0.50 * original short-sale BID, before fees. No same-week reentry.",
+  "other_rules": "Original entry, strike selection, daily ITM risk close, Friday 15:00 mandatory close and October 2 15:00 final liquidation unchanged.",
+  "data_rule": "No synthetic/forward-filled prices. If an open position lacks a required quote, retain the missing observation or halt as required; do not claim zero gaps until audited.",
+  "selection_disclosure": "One threshold chosen as a simple risk-management rule before computing revised performance; no return-driven parameter search. Earlier data-gap knowledge influenced design.",
+  "strict_baseline": "strict_baseline/book.json"
+}

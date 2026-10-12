@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "source_sha256": "963eaf08dc5fd870c2ac51a3d75f1f393f97614e15511a42a828d4768f305ef9",
+  "book_sha256": "8d56a956763ae941ca477768e0acb1c0e4bf532eb7d5880529c1685b6a783031",
+  "book_status": "complete",
+  "events": 96,
+  "ledger_rows": 3520,
+  "checks": [
+    "All expected 2026 regular hourly session observations independently generated; missing whole bars cannot disappear from the ledger.",
+    "Every event matched source-side quote, fee and position; cash replay and every NAV/liquidation NAV reconciled.",
+    "Long and short entry choices recomputed from entry-time quotes, without future-liquidity screening.",
+    "Frozen policy hash, every first chronological 50%-credit take-profit/risk/expiry trigger, real ask fills, and no same-week reentry independently verified; covered-call schedule matches.",
+    "Summary, all CSV exports, JSON/JavaScript identity and unmodified source SHA-256 verified.",
+    "Every scatter point traces to source; separate long/short and pooled regressions independently recomputed."
+  ],
+  "limitations": [
+    "Audit verifies reproducibility from supplied API response data, not the provider entitlement, original exchange tape, or tick-level executability.",
+    "American-option assignment is not observed by this source; the base assignment assumption remains a model limitation."
+  ]
+}
