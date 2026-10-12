@@ -1,0 +1,659 @@
+{
+  "source_sha256": "963eaf08dc5fd870c2ac51a3d75f1f393f97614e15511a42a828d4768f305ef9",
+  "scope": "Fixed-rule availability audit for full planned Apr 6-Oct 2 horizon; no fills or returns. After first unresolved exit, weekly selections are conditional data requirements, not booked trades. Funding not recomputed after unresolved execution.",
+  "calendar_expected_hourly_timestamps": 880,
+  "stock_long_missing_whole_rows": [],
+  "weekly": [
+    {
+      "monday": "2026-04-06",
+      "friday": "2026-04-10",
+      "time": "2026-04-06T15:00:00Z",
+      "spot": 212.12,
+      "ric": "AMZND102622000.U^D26",
+      "status": "entry_quote_eligible",
+      "strike": 220.0,
+      "entry_row": {
+        "time": "2026-04-06T15:00:00Z",
+        "BID": 0.47,
+        "ASK": 0.48,
+        "TRDPRC_1": 0.48,
+        "ACVOL_UNS": 1944.0
+      },
+      "exit_time": "2026-04-10T19:00:00Z",
+      "exit_kind": "scheduled",
+      "path_uncertain": false,
+      "exit_quote_available": true
+    },
+    {
+      "monday": "2026-04-13",
+      "friday": "2026-04-17",
+      "time": "2026-04-13T15:00:00Z",
+      "spot": 237.54,
+      "ric": "AMZND172624500.U^D26",
+      "status": "entry_quote_eligible",
+      "strike": 245.0,
+      "entry_row": {
+        "time": "2026-04-13T15:00:00Z",
+        "BID": 0.88,
+        "ASK": 0.9,
+        "TRDPRC_1": 0.9,
+        "ACVOL_UNS": 1986.0
+      },
+      "exit_time": "2026-04-17T19:00:00Z",
+      "exit_kind": "scheduled",
+      "path_uncertain": false,
+      "exit_quote_available": true
+    },
+    {
+      "monday": "2026-04-20",
+      "friday": "2026-04-24",
+      "time": "2026-04-20T15:00:00Z",
+      "spot": 245.7805,
+      "ric": "AMZND242625500.U^D26",
+      "status": "entry_quote_eligible",
+      "strike": 255.0,
+      "entry_row": {
+        "time": "2026-04-20T15:00:00Z",
+        "BID": 0.74,
+        "ASK": 0.77,
+        "TRDPRC_1": 0.73,
+        "ACVOL_UNS": 947.0
+      },
+      "exit_time": "2026-04-24T19:00:00Z",
+      "exit_kind": "scheduled",
+      "path_uncertain": false,
+      "exit_quote_available": true
+    },
+    {
+      "monday": "2026-04-27",
+      "friday": "2026-05-01",
+      "time": "2026-04-27T15:00:00Z",
+      "spot": 262.869015,
+      "ric": "AMZNE012627500.U^E26",
+      "status": "entry_quote_eligible",
+      "strike": 275.0,
+      "entry_row": {
+        "time": "2026-04-27T15:00:00Z",
+        "BID": 4.95,
+        "ASK": 4.95,
+        "TRDPRC_1": 4.95,
+        "ACVOL_UNS": 1027.0
+      },
+      "exit_time": "2026-05-01T19:00:00Z",
+      "exit_kind": "scheduled",
+      "path_uncertain": false,
+      "exit_quote_available": true
+    },
+    {
+      "monday": "2026-05-04",
+      "friday": "2026-05-08",
+      "time": "2026-05-04T15:00:00Z",
+      "spot": 273.4516,
+      "ric": "AMZNE082628500.U^E26",
+      "status": "entry_quote_eligible",
+      "strike": 285.0,
+      "entry_row": {
+        "time": "2026-05-04T15:00:00Z",
+        "BID": 0.87,
+        "ASK": 0.91,
+        "TRDPRC_1": 0.89,
+        "ACVOL_UNS": 1932.0
+      },
+      "exit_time": "2026-05-08T19:00:00Z",
+      "exit_kind": "scheduled",
+      "path_uncertain": false,
+      "exit_quote_available": true
+    },
+    {
+      "monday": "2026-05-11",
+      "friday": "2026-05-15",
+      "time": "2026-05-11T15:00:00Z",
+      "spot": 271.78,
+      "ric": "AMZNE152628000.U^E26",
+      "status": "entry_quote_eligible",
+      "strike": 280.0,
+      "entry_row": {
+        "time": "2026-05-11T15:00:00Z",
+        "BID": 0.94,
+        "ASK": 0.97,
+        "TRDPRC_1": 0.95,
+        "ACVOL_UNS": 1816.0
+      },
+      "exit_time": "2026-05-15T19:00:00Z",
+      "exit_kind": "scheduled",
+      "path_uncertain": false,
+      "exit_quote_available": true
+    },
+    {
+      "monday": "2026-05-18",
+      "friday": "2026-05-22",
+      "time": "2026-05-18T15:00:00Z",
+      "spot": 267.929119,
+      "ric": "AMZNE222628000.U^E26",
+      "status": "entry_quote_eligible",
+      "strike": 280.0,
+      "entry_row": {
+        "time": "2026-05-18T15:00:00Z",
+        "BID": 0.68,
+        "ASK": 0.72,
+        "TRDPRC_1": 0.72,
+        "ACVOL_UNS": 2178.0
+      },
+      "exit_time": "2026-05-22T19:00:00Z",
+      "exit_kind": "scheduled",
+      "path_uncertain": false,
+      "exit_quote_available": true
+    },
+    {
+      "monday": "2026-05-25",
+      "friday": "2026-05-29",
+      "time": "2026-05-25T15:00:00Z",
+      "spot": null,
+      "ric": null,
+      "status": "no_monday_print"
+    },
+    {
+      "monday": "2026-06-01",
+      "friday": "2026-06-05",
+      "time": "2026-06-01T15:00:00Z",
+      "spot": 264.6401,
+      "ric": "AMZNF052627500.U^F26",
+      "status": "entry_quote_eligible",
+      "strike": 275.0,
+      "entry_row": {
+        "time": "2026-06-01T15:00:00Z",
+        "BID": 0.94,
+        "ASK": 0.97,
+        "TRDPRC_1": 0.96,
+        "ACVOL_UNS": 1878.0
+      },
+      "exit_time": "2026-06-05T19:00:00Z",
+      "exit_kind": "scheduled",
+      "path_uncertain": false,
+      "exit_quote_available": true
+    },
+    {
+      "monday": "2026-06-08",
+      "friday": "2026-06-12",
+      "time": "2026-06-08T15:00:00Z",
+      "spot": 247.2288,
+      "ric": "AMZNF122625500.U^F26",
+      "status": "entry_quote_eligible",
+      "strike": 255.0,
+      "entry_row": {
+        "time": "2026-06-08T15:00:00Z",
+        "BID": 1.2,
+        "ASK": 1.26,
+        "TRDPRC_1": 1.24,
+        "ACVOL_UNS": 912.0
+      },
+      "exit_time": "2026-06-12T19:00:00Z",
+      "exit_kind": "scheduled",
+      "path_uncertain": false,
+      "exit_quote_available": true
+    },
+    {
+      "monday": "2026-06-15",
+      "friday": "2026-06-19",
+      "time": "2026-06-15T15:00:00Z",
+      "spot": 246.445,
+      "ric": null,
+      "status": "predeclared_closed_friday"
+    },
+    {
+      "monday": "2026-06-22",
+      "friday": "2026-06-26",
+      "time": "2026-06-22T15:00:00Z",
+      "spot": 234.29,
+      "ric": "AMZNF262624500.U^F26",
+      "status": "entry_quote_eligible",
+      "strike": 245.0,
+      "entry_row": {
+        "time": "2026-06-22T15:00:00Z",
+        "BID": 0.84,
+        "ASK": 0.86,
+        "TRDPRC_1": 0.84,
+        "ACVOL_UNS": 6048.0
+      },
+      "exit_time": "2026-06-26T19:00:00Z",
+      "exit_kind": "scheduled",
+      "path_uncertain": false,
+      "exit_quote_available": true
+    },
+    {
+      "monday": "2026-06-29",
+      "friday": "2026-07-03",
+      "time": "2026-06-29T15:00:00Z",
+      "spot": 245.18,
+      "ric": null,
+      "status": "predeclared_closed_friday"
+    },
+    {
+      "monday": "2026-07-06",
+      "friday": "2026-07-10",
+      "time": "2026-07-06T15:00:00Z",
+      "spot": 242.675,
+      "ric": "AMZNG102625000.U^G26",
+      "status": "entry_quote_eligible",
+      "strike": 250.0,
+      "entry_row": {
+        "time": "2026-07-06T15:00:00Z",
+        "BID": 1.31,
+        "ASK": 1.34,
+        "TRDPRC_1": 1.33,
+        "ACVOL_UNS": 1913.0
+      },
+      "exit_time": "2026-07-10T19:00:00Z",
+      "exit_kind": "scheduled",
+      "path_uncertain": false,
+      "exit_quote_available": true
+    },
+    {
+      "monday": "2026-07-13",
+      "friday": "2026-07-17",
+      "time": "2026-07-13T15:00:00Z",
+      "spot": 248.2615,
+      "ric": "AMZNG172626000.U^G26",
+      "status": "entry_quote_eligible",
+      "strike": 260.0,
+      "entry_row": {
+        "time": "2026-07-13T15:00:00Z",
+        "BID": 0.67,
+        "ASK": 0.7,
+        "TRDPRC_1": 0.68,
+        "ACVOL_UNS": 5197.0
+      },
+      "exit_time": "2026-07-17T19:00:00Z",
+      "exit_kind": "scheduled",
+      "path_uncertain": false,
+      "exit_quote_available": true
+    },
+    {
+      "monday": "2026-07-20",
+      "friday": "2026-07-24",
+      "time": "2026-07-20T15:00:00Z",
+      "spot": 249.99,
+      "ric": "AMZNG242626000.U^G26",
+      "status": "entry_quote_eligible",
+      "strike": 260.0,
+      "entry_row": {
+        "time": "2026-07-20T15:00:00Z",
+        "BID": 1.01,
+        "ASK": 1.07,
+        "TRDPRC_1": 1.04,
+        "ACVOL_UNS": 3320.0
+      },
+      "exit_time": "2026-07-24T19:00:00Z",
+      "exit_kind": "scheduled",
+      "path_uncertain": false,
+      "exit_quote_available": true
+    },
+    {
+      "monday": "2026-07-27",
+      "friday": "2026-07-31",
+      "time": "2026-07-27T15:00:00Z",
+      "spot": 233.554,
+      "ric": "AMZNG312624500.U^G26",
+      "status": "entry_quote_eligible",
+      "strike": 245.0,
+      "entry_row": {
+        "time": "2026-07-27T15:00:00Z",
+        "BID": 3.6,
+        "ASK": 3.8,
+        "TRDPRC_1": 3.72,
+        "ACVOL_UNS": 482.0
+      },
+      "exit_time": "2026-07-31T19:00:00Z",
+      "exit_kind": "scheduled",
+      "path_uncertain": false,
+      "exit_quote_available": true
+    },
+    {
+      "monday": "2026-08-03",
+      "friday": "2026-08-07",
+      "time": "2026-08-03T15:00:00Z",
+      "spot": 284.935,
+      "ric": "AMZNH072629500.U^H26",
+      "status": "entry_quote_eligible",
+      "strike": 295.0,
+      "entry_row": {
+        "time": "2026-08-03T15:00:00Z",
+        "BID": 1.46,
+        "ASK": 1.51,
+        "TRDPRC_1": 1.51,
+        "ACVOL_UNS": 4166.0
+      },
+      "exit_time": "2026-08-07T19:00:00Z",
+      "exit_kind": "scheduled",
+      "path_uncertain": false,
+      "exit_quote_available": true
+    },
+    {
+      "monday": "2026-08-10",
+      "friday": "2026-08-14",
+      "time": "2026-08-10T15:00:00Z",
+      "spot": 277.6601,
+      "ric": "AMZNH142629000.U^H26",
+      "status": "entry_quote_eligible",
+      "strike": 290.0,
+      "entry_row": {
+        "time": "2026-08-10T15:00:00Z",
+        "BID": 0.63,
+        "ASK": 0.64,
+        "TRDPRC_1": 0.63,
+        "ACVOL_UNS": 6046.0
+      },
+      "exit_time": "2026-08-14T19:00:00Z",
+      "exit_kind": "scheduled",
+      "path_uncertain": false,
+      "exit_quote_available": false
+    },
+    {
+      "monday": "2026-08-17",
+      "friday": "2026-08-21",
+      "time": "2026-08-17T15:00:00Z",
+      "spot": 260.9499,
+      "ric": "AMZNH212627000.U^H26",
+      "status": "entry_quote_eligible",
+      "strike": 270.0,
+      "entry_row": {
+        "time": "2026-08-17T15:00:00Z",
+        "BID": 0.71,
+        "ASK": 0.72,
+        "TRDPRC_1": 0.72,
+        "ACVOL_UNS": 5001.0
+      },
+      "exit_time": "2026-08-21T19:00:00Z",
+      "exit_kind": "scheduled",
+      "path_uncertain": false,
+      "exit_quote_available": true
+    },
+    {
+      "monday": "2026-08-24",
+      "friday": "2026-08-28",
+      "time": "2026-08-24T15:00:00Z",
+      "spot": 261.88,
+      "ric": "AMZNH282627000.U^H26",
+      "status": "entry_quote_eligible",
+      "strike": 270.0,
+      "entry_row": {
+        "time": "2026-08-24T15:00:00Z",
+        "BID": 1.03,
+        "ASK": 1.05,
+        "TRDPRC_1": 1.03,
+        "ACVOL_UNS": 1814.0
+      },
+      "exit_time": "2026-08-28T19:00:00Z",
+      "exit_kind": "scheduled",
+      "path_uncertain": false,
+      "exit_quote_available": true
+    },
+    {
+      "monday": "2026-08-31",
+      "friday": "2026-09-04",
+      "time": "2026-08-31T15:00:00Z",
+      "spot": 260.8887,
+      "ric": "AMZNI042627000.U^I26",
+      "status": "entry_quote_eligible",
+      "strike": 270.0,
+      "entry_row": {
+        "time": "2026-08-31T15:00:00Z",
+        "BID": 0.66,
+        "ASK": 0.68,
+        "TRDPRC_1": 0.66,
+        "ACVOL_UNS": 2933.0
+      },
+      "exit_time": "2026-09-04T19:00:00Z",
+      "exit_kind": "scheduled",
+      "path_uncertain": false,
+      "exit_quote_available": true
+    },
+    {
+      "monday": "2026-09-07",
+      "friday": "2026-09-11",
+      "time": "2026-09-07T15:00:00Z",
+      "spot": null,
+      "ric": null,
+      "status": "no_monday_print"
+    },
+    {
+      "monday": "2026-09-14",
+      "friday": "2026-09-18",
+      "time": "2026-09-14T15:00:00Z",
+      "spot": 252.3087,
+      "ric": "AMZNI182626000.U^I26",
+      "status": "entry_quote_eligible",
+      "strike": 260.0,
+      "entry_row": {
+        "time": "2026-09-14T15:00:00Z",
+        "BID": 1.0,
+        "ASK": 1.02,
+        "TRDPRC_1": 1.02,
+        "ACVOL_UNS": 5974.0
+      },
+      "exit_time": "2026-09-18T19:00:00Z",
+      "exit_kind": "scheduled",
+      "path_uncertain": false,
+      "exit_quote_available": true
+    },
+    {
+      "monday": "2026-09-21",
+      "friday": "2026-09-25",
+      "time": "2026-09-21T15:00:00Z",
+      "spot": 255.59,
+      "ric": "AMZNI252626500.U^I26",
+      "status": "entry_quote_eligible",
+      "strike": 265.0,
+      "entry_row": {
+        "time": "2026-09-21T15:00:00Z",
+        "BID": 0.67,
+        "ASK": 0.68,
+        "TRDPRC_1": 0.68,
+        "ACVOL_UNS": 1767.0
+      },
+      "exit_time": "2026-09-25T19:00:00Z",
+      "exit_kind": "scheduled",
+      "path_uncertain": false,
+      "exit_quote_available": true
+    },
+    {
+      "monday": "2026-09-28",
+      "friday": "2026-10-02",
+      "time": "2026-09-28T15:00:00Z",
+      "spot": 246.31,
+      "ric": "AMZNJ022625500.U^J26",
+      "status": "entry_quote_eligible",
+      "strike": 255.0,
+      "entry_row": {
+        "time": "2026-09-28T15:00:00Z",
+        "BID": 0.74,
+        "ASK": 0.77,
+        "TRDPRC_1": 0.76,
+        "ACVOL_UNS": 1700.0
+      },
+      "exit_time": "2026-10-02T19:00:00Z",
+      "exit_kind": "scheduled",
+      "path_uncertain": false,
+      "exit_quote_available": true
+    }
+  ],
+  "missing_marks": [
+    {
+      "ric": "AMZNH142629000.U^H26",
+      "time": "2026-08-13T17:00:00Z",
+      "time_et": "2026-08-13T13:00:00-04:00",
+      "purpose": "held_short_mark",
+      "row_present": true,
+      "row": {
+        "time": "2026-08-13T17:00:00Z",
+        "BID": null,
+        "ASK": null,
+        "TRDPRC_1": 0.01,
+        "ACVOL_UNS": 17.0
+      },
+      "stock_row": {
+        "time": "2026-08-13T17:00:00Z",
+        "BID": 265.41,
+        "ASK": 265.45,
+        "TRDPRC_1": 265.41,
+        "ACVOL_UNS": 3466134.861286
+      }
+    },
+    {
+      "ric": "AMZNH142629000.U^H26",
+      "time": "2026-08-13T18:00:00Z",
+      "time_et": "2026-08-13T14:00:00-04:00",
+      "purpose": "held_short_mark",
+      "row_present": true,
+      "row": {
+        "time": "2026-08-13T18:00:00Z",
+        "BID": null,
+        "ASK": null,
+        "TRDPRC_1": 0.01,
+        "ACVOL_UNS": 62.0
+      },
+      "stock_row": {
+        "time": "2026-08-13T18:00:00Z",
+        "BID": 265.35,
+        "ASK": 265.36,
+        "TRDPRC_1": 265.3526,
+        "ACVOL_UNS": 2065331.867617
+      }
+    },
+    {
+      "ric": "AMZNH142629000.U^H26",
+      "time": "2026-08-13T19:00:00Z",
+      "time_et": "2026-08-13T15:00:00-04:00",
+      "purpose": "held_short_mark",
+      "row_present": true,
+      "row": {
+        "time": "2026-08-13T19:00:00Z",
+        "BID": null,
+        "ASK": null,
+        "TRDPRC_1": 0.03,
+        "ACVOL_UNS": 31.0
+      },
+      "stock_row": {
+        "time": "2026-08-13T19:00:00Z",
+        "BID": 266.16,
+        "ASK": 266.19,
+        "TRDPRC_1": 266.184,
+        "ACVOL_UNS": 2225603.326938
+      }
+    },
+    {
+      "ric": "AMZNH142629000.U^H26",
+      "time": "2026-08-13T20:00:00Z",
+      "time_et": "2026-08-13T16:00:00-04:00",
+      "purpose": "held_short_mark",
+      "row_present": true,
+      "row": {
+        "time": "2026-08-13T20:00:00Z",
+        "BID": null,
+        "ASK": null,
+        "TRDPRC_1": 0.01,
+        "ACVOL_UNS": 104.0
+      },
+      "stock_row": {
+        "time": "2026-08-13T20:00:00Z",
+        "BID": 265.08,
+        "ASK": 265.17,
+        "TRDPRC_1": 265.125,
+        "ACVOL_UNS": 5153830.576411
+      }
+    },
+    {
+      "ric": "AMZNH142629000.U^H26",
+      "time": "2026-08-14T17:00:00Z",
+      "time_et": "2026-08-14T13:00:00-04:00",
+      "purpose": "held_short_mark",
+      "row_present": true,
+      "row": {
+        "time": "2026-08-14T17:00:00Z",
+        "BID": null,
+        "ASK": null,
+        "TRDPRC_1": 0.01,
+        "ACVOL_UNS": 10.0
+      },
+      "stock_row": {
+        "time": "2026-08-14T17:00:00Z",
+        "BID": 263.24,
+        "ASK": 263.25,
+        "TRDPRC_1": 263.245,
+        "ACVOL_UNS": 1641036.725947
+      }
+    },
+    {
+      "ric": "AMZNH142629000.U^H26",
+      "time": "2026-08-14T18:00:00Z",
+      "time_et": "2026-08-14T14:00:00-04:00",
+      "purpose": "held_short_mark",
+      "row_present": true,
+      "row": {
+        "time": "2026-08-14T18:00:00Z",
+        "BID": null,
+        "ASK": null,
+        "TRDPRC_1": 0.01,
+        "ACVOL_UNS": 15.0
+      },
+      "stock_row": {
+        "time": "2026-08-14T18:00:00Z",
+        "BID": 263.28,
+        "ASK": 263.31,
+        "TRDPRC_1": 263.303982,
+        "ACVOL_UNS": 2833011.924316
+      }
+    }
+  ],
+  "missing_required_exits": [
+    {
+      "ric": "AMZNH142629000.U^H26",
+      "time": "2026-08-14T19:00:00Z",
+      "time_et": "2026-08-14T15:00:00-04:00",
+      "purpose": "mandatory_friday_exit",
+      "row_present": true,
+      "row": {
+        "time": "2026-08-14T19:00:00Z",
+        "BID": null,
+        "ASK": null,
+        "TRDPRC_1": 0.01,
+        "ACVOL_UNS": 7.0
+      },
+      "stock_row": {
+        "time": "2026-08-14T19:00:00Z",
+        "BID": 263.04,
+        "ASK": 263.07,
+        "TRDPRC_1": 263.055,
+        "ACVOL_UNS": 3045677.875868
+      }
+    }
+  ],
+  "missing_risk_checks": [],
+  "long_stock_missing_marks": [],
+  "final_liquidations": [
+    {
+      "ric": "AMZNA212815000.U",
+      "time": "2026-10-02T19:00:00Z",
+      "quote_valid": true,
+      "row": {
+        "time": "2026-10-02T19:00:00Z",
+        "BID": 114.0,
+        "ASK": 115.0,
+        "TRDPRC_1": 115.0,
+        "ACVOL_UNS": 5.0
+      }
+    },
+    {
+      "ric": "AMZN.O",
+      "time": "2026-10-02T19:00:00Z",
+      "quote_valid": true,
+      "row": {
+        "time": "2026-10-02T19:00:00Z",
+        "BID": 250.44,
+        "ASK": 250.47,
+        "TRDPRC_1": 250.47,
+        "ACVOL_UNS": 1811418.671861
+      }
+    }
+  ]
+}
