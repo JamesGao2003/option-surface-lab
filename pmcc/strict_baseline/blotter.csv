@@ -1,0 +1,67 @@
+id,order_sequence,phase,account,time,instrument,kind,side,qty,fill,fee,cash_delta,cash_after,strike,expiry,rule
+1,1,BOOKED,PMCC,2026-04-06T15:00:00Z,AMZNA212815000.U,option,BUY,1,86.25,0.65,-8625.65,41374.35,150.0,2028-01-21,Initial entry: closest eligible 70%-of-spot strike; buy long call at ask.
+2,2,BOOKED,long_call,2026-04-06T15:00:00Z,AMZNA212815000.U,option,BUY,1,86.25,0.65,-8625.65,41374.35,150.0,2028-01-21,Initial entry: closest eligible 70%-of-spot strike; buy long call at ask.
+3,3,BOOKED,covered_call,2026-04-06T15:00:00Z,AMZN.O,stock,BUY,100,212.13,0.0,-21213.0,28787.0,,,Comparison enters 100 shares at stock ask.
+4,4,BOOKED,buy_hold,2026-04-06T15:00:00Z,AMZN.O,stock,BUY,100,212.13,0.0,-21213.0,28787.0,,,Comparison enters 100 shares at stock ask.
+5,5,BOOKED,PMCC,2026-04-06T15:00:00Z,AMZND102622000.U^D26,option,SELL,1,0.47,0.65,46.35,41420.7,220.0,2026-04-10,"Monday 11 ET: lowest eligible of first three $5 strikes >= 103% of spot, above long strike."
+6,6,BOOKED,covered_call,2026-04-06T15:00:00Z,AMZND102622000.U^D26,option,SELL,1,0.47,0.65,46.35,28833.35,220.0,2026-04-10,"Monday 11 ET: lowest eligible of first three $5 strikes >= 103% of spot, above long strike."
+7,7,BOOKED,PMCC,2026-04-10T19:00:00Z,AMZND102622000.U^D26,option,BUY_TO_CLOSE,1,17.95,0.65,-1795.65,39625.049999999996,220.0,2026-04-10,Friday 15 ET scheduled buy-to-close.
+8,8,BOOKED,covered_call,2026-04-10T19:00:00Z,AMZND102622000.U^D26,option,BUY_TO_CLOSE,1,17.95,0.65,-1795.65,27037.699999999997,220.0,2026-04-10,Friday 15 ET scheduled buy-to-close.
+9,9,BOOKED,PMCC,2026-04-13T15:00:00Z,AMZND172624500.U^D26,option,SELL,1,0.88,0.65,87.35,39712.399999999994,245.0,2026-04-17,"Monday 11 ET: lowest eligible of first three $5 strikes >= 103% of spot, above long strike."
+10,10,BOOKED,covered_call,2026-04-13T15:00:00Z,AMZND172624500.U^D26,option,SELL,1,0.88,0.65,87.35,27125.049999999996,245.0,2026-04-17,"Monday 11 ET: lowest eligible of first three $5 strikes >= 103% of spot, above long strike."
+11,11,BOOKED,PMCC,2026-04-17T19:00:00Z,AMZND172624500.U^D26,option,BUY_TO_CLOSE,1,6.35,0.65,-635.65,39076.74999999999,245.0,2026-04-17,Friday 15 ET scheduled buy-to-close.
+12,12,BOOKED,covered_call,2026-04-17T19:00:00Z,AMZND172624500.U^D26,option,BUY_TO_CLOSE,1,6.35,0.65,-635.65,26489.399999999994,245.0,2026-04-17,Friday 15 ET scheduled buy-to-close.
+13,13,BOOKED,PMCC,2026-04-20T15:00:00Z,AMZND242625500.U^D26,option,SELL,1,0.74,0.65,73.35,39150.09999999999,255.0,2026-04-24,"Monday 11 ET: lowest eligible of first three $5 strikes >= 103% of spot, above long strike."
+14,14,BOOKED,covered_call,2026-04-20T15:00:00Z,AMZND242625500.U^D26,option,SELL,1,0.74,0.65,73.35,26562.749999999993,255.0,2026-04-24,"Monday 11 ET: lowest eligible of first three $5 strikes >= 103% of spot, above long strike."
+15,15,BOOKED,PMCC,2026-04-24T19:00:00Z,AMZND242625500.U^D26,option,BUY_TO_CLOSE,1,8.8,0.65,-880.6500000000001,38269.44999999999,255.0,2026-04-24,Friday 15 ET scheduled buy-to-close.
+16,16,BOOKED,covered_call,2026-04-24T19:00:00Z,AMZND242625500.U^D26,option,BUY_TO_CLOSE,1,8.8,0.65,-880.6500000000001,25682.09999999999,255.0,2026-04-24,Friday 15 ET scheduled buy-to-close.
+17,17,BOOKED,PMCC,2026-04-27T15:00:00Z,AMZNE012627500.U^E26,option,SELL,1,4.95,0.65,494.35,38763.79999999999,275.0,2026-05-01,"Monday 11 ET: lowest eligible of first three $5 strikes >= 103% of spot, above long strike."
+18,18,BOOKED,covered_call,2026-04-27T15:00:00Z,AMZNE012627500.U^E26,option,SELL,1,4.95,0.65,494.35,26176.44999999999,275.0,2026-05-01,"Monday 11 ET: lowest eligible of first three $5 strikes >= 103% of spot, above long strike."
+19,19,BOOKED,PMCC,2026-05-01T19:00:00Z,AMZNE012627500.U^E26,option,BUY_TO_CLOSE,1,0.01,0.65,-1.65,38762.14999999999,275.0,2026-05-01,Friday 15 ET scheduled buy-to-close.
+20,20,BOOKED,covered_call,2026-05-01T19:00:00Z,AMZNE012627500.U^E26,option,BUY_TO_CLOSE,1,0.01,0.65,-1.65,26174.79999999999,275.0,2026-05-01,Friday 15 ET scheduled buy-to-close.
+21,21,BOOKED,PMCC,2026-05-04T15:00:00Z,AMZNE082628500.U^E26,option,SELL,1,0.87,0.65,86.35,38848.499999999985,285.0,2026-05-08,"Monday 11 ET: lowest eligible of first three $5 strikes >= 103% of spot, above long strike."
+22,22,BOOKED,covered_call,2026-05-04T15:00:00Z,AMZNE082628500.U^E26,option,SELL,1,0.87,0.65,86.35,26261.149999999987,285.0,2026-05-08,"Monday 11 ET: lowest eligible of first three $5 strikes >= 103% of spot, above long strike."
+23,23,BOOKED,PMCC,2026-05-08T19:00:00Z,AMZNE082628500.U^E26,option,BUY_TO_CLOSE,1,0.01,0.65,-1.65,38846.849999999984,285.0,2026-05-08,Friday 15 ET scheduled buy-to-close.
+24,24,BOOKED,covered_call,2026-05-08T19:00:00Z,AMZNE082628500.U^E26,option,BUY_TO_CLOSE,1,0.01,0.65,-1.65,26259.499999999985,285.0,2026-05-08,Friday 15 ET scheduled buy-to-close.
+25,25,BOOKED,PMCC,2026-05-11T15:00:00Z,AMZNE152628000.U^E26,option,SELL,1,0.94,0.65,93.35,38940.19999999998,280.0,2026-05-15,"Monday 11 ET: lowest eligible of first three $5 strikes >= 103% of spot, above long strike."
+26,26,BOOKED,covered_call,2026-05-11T15:00:00Z,AMZNE152628000.U^E26,option,SELL,1,0.94,0.65,93.35,26352.849999999984,280.0,2026-05-15,"Monday 11 ET: lowest eligible of first three $5 strikes >= 103% of spot, above long strike."
+27,27,BOOKED,PMCC,2026-05-15T19:00:00Z,AMZNE152628000.U^E26,option,BUY_TO_CLOSE,1,0.01,0.65,-1.65,38938.54999999998,280.0,2026-05-15,Friday 15 ET scheduled buy-to-close.
+28,28,BOOKED,covered_call,2026-05-15T19:00:00Z,AMZNE152628000.U^E26,option,BUY_TO_CLOSE,1,0.01,0.65,-1.65,26351.199999999983,280.0,2026-05-15,Friday 15 ET scheduled buy-to-close.
+29,29,BOOKED,PMCC,2026-05-18T15:00:00Z,AMZNE222628000.U^E26,option,SELL,1,0.68,0.65,67.35,39005.89999999998,280.0,2026-05-22,"Monday 11 ET: lowest eligible of first three $5 strikes >= 103% of spot, above long strike."
+30,30,BOOKED,covered_call,2026-05-18T15:00:00Z,AMZNE222628000.U^E26,option,SELL,1,0.68,0.65,67.35,26418.54999999998,280.0,2026-05-22,"Monday 11 ET: lowest eligible of first three $5 strikes >= 103% of spot, above long strike."
+31,31,BOOKED,PMCC,2026-05-22T19:00:00Z,AMZNE222628000.U^E26,option,BUY_TO_CLOSE,1,0.01,0.65,-1.65,39004.24999999998,280.0,2026-05-22,Friday 15 ET scheduled buy-to-close.
+32,32,BOOKED,covered_call,2026-05-22T19:00:00Z,AMZNE222628000.U^E26,option,BUY_TO_CLOSE,1,0.01,0.65,-1.65,26416.89999999998,280.0,2026-05-22,Friday 15 ET scheduled buy-to-close.
+33,33,BOOKED,PMCC,2026-06-01T15:00:00Z,AMZNF052627500.U^F26,option,SELL,1,0.94,0.65,93.35,39097.59999999998,275.0,2026-06-05,"Monday 11 ET: lowest eligible of first three $5 strikes >= 103% of spot, above long strike."
+34,34,BOOKED,covered_call,2026-06-01T15:00:00Z,AMZNF052627500.U^F26,option,SELL,1,0.94,0.65,93.35,26510.249999999978,275.0,2026-06-05,"Monday 11 ET: lowest eligible of first three $5 strikes >= 103% of spot, above long strike."
+35,35,BOOKED,PMCC,2026-06-05T19:00:00Z,AMZNF052627500.U^F26,option,BUY_TO_CLOSE,1,0.01,0.65,-1.65,39095.949999999975,275.0,2026-06-05,Friday 15 ET scheduled buy-to-close.
+36,36,BOOKED,covered_call,2026-06-05T19:00:00Z,AMZNF052627500.U^F26,option,BUY_TO_CLOSE,1,0.01,0.65,-1.65,26508.599999999977,275.0,2026-06-05,Friday 15 ET scheduled buy-to-close.
+37,37,BOOKED,PMCC,2026-06-08T15:00:00Z,AMZNF122625500.U^F26,option,SELL,1,1.2,0.65,119.35,39215.299999999974,255.0,2026-06-12,"Monday 11 ET: lowest eligible of first three $5 strikes >= 103% of spot, above long strike."
+38,38,BOOKED,covered_call,2026-06-08T15:00:00Z,AMZNF122625500.U^F26,option,SELL,1,1.2,0.65,119.35,26627.949999999975,255.0,2026-06-12,"Monday 11 ET: lowest eligible of first three $5 strikes >= 103% of spot, above long strike."
+39,39,BOOKED,PMCC,2026-06-12T19:00:00Z,AMZNF122625500.U^F26,option,BUY_TO_CLOSE,1,0.01,0.65,-1.65,39213.64999999997,255.0,2026-06-12,Friday 15 ET scheduled buy-to-close.
+40,40,BOOKED,covered_call,2026-06-12T19:00:00Z,AMZNF122625500.U^F26,option,BUY_TO_CLOSE,1,0.01,0.65,-1.65,26626.299999999974,255.0,2026-06-12,Friday 15 ET scheduled buy-to-close.
+41,41,BOOKED,PMCC,2026-06-22T15:00:00Z,AMZNF262624500.U^F26,option,SELL,1,0.84,0.65,83.35,39296.99999999997,245.0,2026-06-26,"Monday 11 ET: lowest eligible of first three $5 strikes >= 103% of spot, above long strike."
+42,42,BOOKED,covered_call,2026-06-22T15:00:00Z,AMZNF262624500.U^F26,option,SELL,1,0.84,0.65,83.35,26709.649999999972,245.0,2026-06-26,"Monday 11 ET: lowest eligible of first three $5 strikes >= 103% of spot, above long strike."
+43,43,BOOKED,PMCC,2026-06-26T19:00:00Z,AMZNF262624500.U^F26,option,BUY_TO_CLOSE,1,0.01,0.65,-1.65,39295.34999999997,245.0,2026-06-26,Friday 15 ET scheduled buy-to-close.
+44,44,BOOKED,covered_call,2026-06-26T19:00:00Z,AMZNF262624500.U^F26,option,BUY_TO_CLOSE,1,0.01,0.65,-1.65,26707.99999999997,245.0,2026-06-26,Friday 15 ET scheduled buy-to-close.
+45,45,BOOKED,PMCC,2026-07-06T15:00:00Z,AMZNG102625000.U^G26,option,SELL,1,1.31,0.65,130.35,39425.69999999997,250.0,2026-07-10,"Monday 11 ET: lowest eligible of first three $5 strikes >= 103% of spot, above long strike."
+46,46,BOOKED,covered_call,2026-07-06T15:00:00Z,AMZNG102625000.U^G26,option,SELL,1,1.31,0.65,130.35,26838.34999999997,250.0,2026-07-10,"Monday 11 ET: lowest eligible of first three $5 strikes >= 103% of spot, above long strike."
+47,47,BOOKED,PMCC,2026-07-10T19:00:00Z,AMZNG102625000.U^G26,option,BUY_TO_CLOSE,1,0.01,0.65,-1.65,39424.04999999997,250.0,2026-07-10,Friday 15 ET scheduled buy-to-close.
+48,48,BOOKED,covered_call,2026-07-10T19:00:00Z,AMZNG102625000.U^G26,option,BUY_TO_CLOSE,1,0.01,0.65,-1.65,26836.699999999968,250.0,2026-07-10,Friday 15 ET scheduled buy-to-close.
+49,49,BOOKED,PMCC,2026-07-13T15:00:00Z,AMZNG172626000.U^G26,option,SELL,1,0.67,0.65,66.35,39490.399999999965,260.0,2026-07-17,"Monday 11 ET: lowest eligible of first three $5 strikes >= 103% of spot, above long strike."
+50,50,BOOKED,covered_call,2026-07-13T15:00:00Z,AMZNG172626000.U^G26,option,SELL,1,0.67,0.65,66.35,26903.049999999967,260.0,2026-07-17,"Monday 11 ET: lowest eligible of first three $5 strikes >= 103% of spot, above long strike."
+51,51,BOOKED,PMCC,2026-07-17T19:00:00Z,AMZNG172626000.U^G26,option,BUY_TO_CLOSE,1,0.01,0.65,-1.65,39488.74999999996,260.0,2026-07-17,Friday 15 ET scheduled buy-to-close.
+52,52,BOOKED,covered_call,2026-07-17T19:00:00Z,AMZNG172626000.U^G26,option,BUY_TO_CLOSE,1,0.01,0.65,-1.65,26901.399999999965,260.0,2026-07-17,Friday 15 ET scheduled buy-to-close.
+53,53,BOOKED,PMCC,2026-07-20T15:00:00Z,AMZNG242626000.U^G26,option,SELL,1,1.01,0.65,100.35,39589.09999999996,260.0,2026-07-24,"Monday 11 ET: lowest eligible of first three $5 strikes >= 103% of spot, above long strike."
+54,54,BOOKED,covered_call,2026-07-20T15:00:00Z,AMZNG242626000.U^G26,option,SELL,1,1.01,0.65,100.35,27001.749999999964,260.0,2026-07-24,"Monday 11 ET: lowest eligible of first three $5 strikes >= 103% of spot, above long strike."
+55,55,BOOKED,PMCC,2026-07-24T19:00:00Z,AMZNG242626000.U^G26,option,BUY_TO_CLOSE,1,0.01,0.65,-1.65,39587.44999999996,260.0,2026-07-24,Friday 15 ET scheduled buy-to-close.
+56,56,BOOKED,covered_call,2026-07-24T19:00:00Z,AMZNG242626000.U^G26,option,BUY_TO_CLOSE,1,0.01,0.65,-1.65,27000.099999999962,260.0,2026-07-24,Friday 15 ET scheduled buy-to-close.
+57,57,BOOKED,PMCC,2026-07-27T15:00:00Z,AMZNG312624500.U^G26,option,SELL,1,3.6,0.65,359.35,39946.79999999996,245.0,2026-07-31,"Monday 11 ET: lowest eligible of first three $5 strikes >= 103% of spot, above long strike."
+58,58,BOOKED,covered_call,2026-07-27T15:00:00Z,AMZNG312624500.U^G26,option,SELL,1,3.6,0.65,359.35,27359.44999999996,245.0,2026-07-31,"Monday 11 ET: lowest eligible of first three $5 strikes >= 103% of spot, above long strike."
+59,59,BOOKED,PMCC,2026-07-31T19:00:00Z,AMZNG312624500.U^G26,option,BUY_TO_CLOSE,1,26.8,0.65,-2680.65,37266.14999999996,245.0,2026-07-31,Friday 15 ET scheduled buy-to-close.
+60,60,BOOKED,covered_call,2026-07-31T19:00:00Z,AMZNG312624500.U^G26,option,BUY_TO_CLOSE,1,26.8,0.65,-2680.65,24678.79999999996,245.0,2026-07-31,Friday 15 ET scheduled buy-to-close.
+61,61,BOOKED,PMCC,2026-08-03T15:00:00Z,AMZNH072629500.U^H26,option,SELL,1,1.46,0.65,145.35,37411.499999999956,295.0,2026-08-07,"Monday 11 ET: lowest eligible of first three $5 strikes >= 103% of spot, above long strike."
+62,62,BOOKED,covered_call,2026-08-03T15:00:00Z,AMZNH072629500.U^H26,option,SELL,1,1.46,0.65,145.35,24824.149999999958,295.0,2026-08-07,"Monday 11 ET: lowest eligible of first three $5 strikes >= 103% of spot, above long strike."
+63,63,BOOKED,PMCC,2026-08-07T19:00:00Z,AMZNH072629500.U^H26,option,BUY_TO_CLOSE,1,0.01,0.65,-1.65,37409.849999999955,295.0,2026-08-07,Friday 15 ET scheduled buy-to-close.
+64,64,BOOKED,covered_call,2026-08-07T19:00:00Z,AMZNH072629500.U^H26,option,BUY_TO_CLOSE,1,0.01,0.65,-1.65,24822.499999999956,295.0,2026-08-07,Friday 15 ET scheduled buy-to-close.
+65,65,BOOKED,PMCC,2026-08-10T15:00:00Z,AMZNH142629000.U^H26,option,SELL,1,0.63,0.65,62.35,37472.19999999995,290.0,2026-08-14,"Monday 11 ET: lowest eligible of first three $5 strikes >= 103% of spot, above long strike."
+66,66,BOOKED,covered_call,2026-08-10T15:00:00Z,AMZNH142629000.U^H26,option,SELL,1,0.63,0.65,62.35,24884.849999999955,290.0,2026-08-14,"Monday 11 ET: lowest eligible of first three $5 strikes >= 103% of spot, above long strike."
