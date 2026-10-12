@@ -1,6 +1,6 @@
 # AMZN Poor Man’s Covered Call
 
-FINTECH 535 strategy research. Target page (deployment not yet verified): <https://jamesgao2003.github.io/option-surface-lab/pmcc/>.
+FINTECH 535 strategy research. Published page: <https://jamesgao2003.github.io/option-surface-lab/pmcc/>.
 
 A one-contract long-call diagonal is compared with a 100-share covered call, 100 shares alone, and the same long call alone. Each account starts with $50,000. Observed LSEG bid/ask bars supply the prices: buy at ask, sell at bid, and charge $0.65 per option contract per transaction. The page reads results directly from `book.js`; the full source, cash ledger and event blotter are downloadable.
 
