@@ -35,7 +35,7 @@
 
   // ---------- status ----------
   const audit = prov.audit;
-  const auditText = audit ? `${num(audit.candidates)} contracts requested from LSEG, ${num(audit.observed)} came back with prices, ${num(audit.no_observations)} were never listed, ${num(audit.request_failed)} requests failed.` : 'Source: the Assignment 1.1 UUUU cache (daily mid prices only).';
+  const auditText = audit ? `${num(audit.candidates)} contracts requested from LSEG, ${num(audit.observed)} came back with prices, ${num(audit.no_observations)} returned no data at all (strikes that were most likely never listed), ${num(audit.request_failed)} requests failed.` : 'Source: the Assignment 1.1 UUUU cache (daily mid prices only).';
   $('status').className = 'notice' + (audit && audit.request_failed ? ' warning' : '');
   $('status').innerHTML = `<span class="status-dot"></span><div><strong>Backtest complete: ${S.weeks} weeks, ${BL.length} booked events, ${S.puts_sold} puts and ${S.calls_sold} calls sold.</strong><p>${esc(auditText)} ${S.estimated_marks ? `${S.estimated_marks} daily option mark${S.estimated_marks > 1 ? 's were' : ' was'} estimated because the contract had no closing quote that day; they are flagged in the ledger.` : 'Every daily option mark in the ledger is an observed closing quote.'}</p></div>`;
 
@@ -61,7 +61,7 @@
   text('t-happened', happened.trim());
   const realized = S.realized_stock_pnl, unreal = S.unrealized_stock_pnl;
   let moneyTxt = `Premium collected: ${money(S.premium_collected)} before ${money(S.fees_paid)} of fees. `;
-  if (closed.length) moneyTxt += `Shares bought on assignment and later called away made ${money(realized)} on the stock legs. `;
+  if (closed.length) moneyTxt += realized === 0 ? `The shares I was assigned were bought and called away at the same strike, so the stock leg made nothing and the whole result is premium. ` : `Shares bought on assignment and later called away made ${money(realized)} on the stock legs. `;
   if (open && S.ending_shares) moneyTxt += `At the end I still hold ${S.ending_shares} shares bought at ${px(S.ending_basis)}, worth ${money(unreal)} ${unreal >= 0 ? 'more' : 'less'} than I paid, marked at the last close. `;
   if (S.open_option_liability) moneyTxt += `There is ${money(-S.open_option_liability)} of open short-option value marked against the account. `;
   moneyTxt += `Net result: ${money(S.net_pnl)}. The premium is cash I received, not profit by itself; the stock leg decides whether I keep it.`;
@@ -156,7 +156,7 @@
     stats.push(['Trades inside the closing quote', pct(ev.trade_inside_quote_share)]);
     stats.push(['Trades at or below the bid', pct(ev.trade_at_or_below_bid_share)]);
     stats.push(['R² of trade on mid', fin(ev.r2_mid_vs_trade) ? ev.r2_mid_vs_trade.toFixed(3) : '—']);
-    text('fill-text', `Most of these weekly options had a tight two-sided market at the close, and when they traded, the last trade was usually inside the quote. Selling at the bid means I assume I hit the standing bid rather than waiting at the mid; ${pct(ev.trade_at_or_below_bid_share)} of the printed trades were at or below the bid of that closing quote, so even the bid is not a guarantee, which is why the stress table below also takes 5 and 10 cents off every fill. The last trade and the closing quote are not at the same instant, so this is evidence, not proof.`);
+    text('fill-text', `Most of these weekly options had a tight two-sided market at the close, and when they traded, the last trade was usually inside the quote. Selling at the bid means I assume I hit the standing bid rather than waiting at the mid; ${pct(ev.trade_at_or_below_bid_share)} of the printed trades were at or below the bid of that closing quote, so even the bid is not a guarantee, which is why the stress table below also takes 5 and 10 cents off every fill. The last trade and the closing quote are not from the same instant, so take this as a rough check rather than a guarantee.`);
   } else {
     stats.push(['Contract-days with a mid and a trade', num(ev.trade_pairs)]);
     stats.push(['R² of trade on mid', fin(ev.r2_mid_vs_trade) ? ev.r2_mid_vs_trade.toFixed(3) : '—']);
@@ -172,9 +172,9 @@
   const vRows = Object.entries(variants).map(([k, v]) => { const w = v.wheel, lab = vLabels[k] || [k, '']; return '<tr>' + cell(lab[0]) + cashCell(w.end) + cell(pct2(w.total_return)) + cell(fin(w.sharpe_rf0) ? w.sharpe_rf0.toFixed(2) : '—') + cell(pct(w.max_drawdown)) + cell(v.puts_sold) + cell(v.puts_assigned) + cell(v.calls_sold) + cell(v.calls_called_away) + cell(v.weeks_skipped + v.weeks_holding_without_call) + cell(lab[1]) + '</tr>'; });
   $('stress').tBodies[0].innerHTML = vRows.join('') || '<tr><td colspan="11" class="empty">variants.js not loaded.</td></tr>';
   const h5 = variants.haircut_5c, h10 = variants.haircut_10c;
-  text('stress-caption', h5 && h10 ? `Taking 5 cents off every fill costs ${money(W.end - h5.wheel.end)} over the sample and 10 cents costs ${money(W.end - h10.wheel.end)}. ${W.end - h10.wheel.end < Math.abs(S.net_pnl) ? 'The result does not hinge on the fill assumption.' : 'The fill assumption matters here: a dime per contract changes the sign of the result.'} The rule variants were run once each after the base case, not searched over, and I report them whether they look better or worse.` : '');
+  text('stress-caption', h5 && h10 ? `Taking 5 cents off every fill costs ${money(W.end - h5.wheel.end)} over the sample and 10 cents costs ${money(W.end - h10.wheel.end)}. ${W.end - h10.wheel.end < Math.abs(S.net_pnl) ? 'The result does not hinge on the fill assumption.' : 'The fill assumption matters here: a dime per contract changes the sign of the result.'} I ran each rule variant once after the base case and kept whatever came out, better or worse.` : '');
 
   // ---------- data ----------
   text('d-pull', `${prov.provider}${prov.library ? ', ' + prov.library : ''}. Daily ${hasBA ? 'BID, ASK, MID_PRICE, TRDPRC_1 and ACVOL_UNS' : 'MID_PRICE and TRDPRC_1'} for every weekly ${name} put and call in a strike band around each week's price range, plus the stock's daily OHLC. ${prov.fetched_at ? 'Pulled ' + prov.fetched_at.slice(0, 10) + '.' : ''} wheel_fetch_codebook.py is the script that ran in CodeBook; it saves wheel_source.json with every response and a request audit.`);
-  text('d-check', `The engine reconciles cash on every row: cash only changes on blotter events, and account value is recomputed from positions each day. ${audit ? `${num(audit.request_failed)} requests failed, so nothing in the sample is missing for a data reason; contracts with no observations were simply never listed at that strike.` : ''} ${S.estimated_marks ? `${S.estimated_marks} estimated marks are flagged.` : 'No marks were estimated.'}`);
+  text('d-check', `The engine reconciles cash on every row: cash only changes on blotter events, and account value is recomputed from positions each day. ${audit ? `${num(audit.request_failed)} requests failed, so no week was skipped because of a data problem. Contracts that returned nothing are strikes that most likely were never listed; the request audit lists every one.` : ''} ${S.estimated_marks ? `${S.estimated_marks} estimated marks are flagged.` : 'No marks were estimated.'}`);
 })();
