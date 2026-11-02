@@ -1,0 +1,27 @@
+date,status,side,strike,spot,reason
+2026-04-06,SOLD PUT,PUT,200.0,212.79,94% of spot -> 200.00; 2 contracts; fill 0.36 (bid)
+2026-04-13,SOLD PUT,PUT,227.5,239.89,95% of spot -> 227.50; 2 contracts; fill 0.42 (bid)
+2026-04-20,SOLD PUT,PUT,235.0,248.28,95% of spot -> 235.00; 2 contracts; fill 0.36 (bid)
+2026-04-27,SOLD PUT,PUT,247.5,261.12,95% of spot -> 247.50; 2 contracts; fill 3.90 (bid)
+2026-05-04,SOLD PUT,PUT,257.5,272.05,95% of spot -> 257.50; 1 contract; fill 0.33 (bid)
+2026-05-11,SOLD PUT,PUT,255.0,268.99,95% of spot -> 255.00; 2 contracts; fill 0.33 (bid)
+2026-05-18,SOLD PUT,PUT,250.0,264.86,94% of spot -> 250.00; 2 contracts; fill 0.36 (bid)
+2026-05-26,SOLD PUT,PUT,250.0,265.29,94% of spot -> 250.00; 2 contracts; fill 0.15 (bid)
+2026-06-01,SOLD PUT,PUT,247.5,261.26,95% of spot -> 247.50; 2 contracts; fill 0.50 (bid)
+2026-06-08,SOLD CALL,CALL,247.5,245.22,"floor max(spot 245.22, basis 247.50) -> 247.50; fill 2.73 (bid)"
+2026-06-15,SOLD CALL,CALL,247.5,246.02,"floor max(spot 246.02, basis 247.50) -> 247.50; fill 2.54 (bid)"
+2026-06-22,SOLD CALL,CALL,247.5,232.79,"floor max(spot 232.79, basis 247.50) -> 247.50; fill 0.25 (bid)"
+2026-06-29,SOLD CALL,CALL,247.5,240.14,"floor max(spot 240.14, basis 247.50) -> 247.50; fill 1.02 (bid)"
+2026-07-06,SOLD CALL,CALL,247.5,244.16,"floor max(spot 244.16, basis 247.50) -> 247.50; fill 2.50 (bid)"
+2026-07-13,SOLD CALL,CALL,247.5,247.31,"floor max(spot 247.31, basis 247.50) -> 247.50; fill 3.90 (bid)"
+2026-07-20,SOLD CALL,CALL,250.0,249.99,"floor max(spot 249.99, basis 247.50) -> 250.00; fill 4.05 (bid)"
+2026-07-27,SOLD CALL,CALL,247.5,231.39,"floor max(spot 231.39, basis 247.50) -> 247.50; fill 2.48 (bid)"
+2026-08-03,SOLD PUT,PUT,267.5,284.02,94% of spot -> 267.50; 2 contracts; fill 0.47 (bid)
+2026-08-10,SOLD PUT,PUT,262.5,278.09,94% of spot -> 262.50; 2 contracts; fill 0.27 (bid)
+2026-08-17,SOLD PUT,PUT,247.5,261.31,95% of spot -> 247.50; 2 contracts; fill 0.24 (bid)
+2026-08-24,SOLD PUT,PUT,247.5,262.07,94% of spot -> 247.50; 2 contracts; fill 0.31 (bid)
+2026-08-31,SOLD PUT,PUT,245.0,259.77,94% of spot -> 245.00; 2 contracts; fill 0.15 (bid)
+2026-09-08,SOLD PUT,PUT,242.5,256.97,94% of spot -> 242.50; 2 contracts; fill 0.12 (bid)
+2026-09-14,SOLD PUT,PUT,240.0,253.54,95% of spot -> 240.00; 2 contracts; fill 0.37 (bid)
+2026-09-21,SOLD PUT,PUT,245.0,258.45,95% of spot -> 245.00; 2 contracts; fill 0.27 (bid)
+2026-09-28,SOLD PUT,PUT,232.5,246.15,94% of spot -> 232.50; 2 contracts; fill 0.22 (bid)

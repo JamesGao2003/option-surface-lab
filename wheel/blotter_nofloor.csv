@@ -1,0 +1,23 @@
+id,date,instrument,side,qty,limit,fill,fee,cash_delta,cash_after,note,group
+1,2026-06-22,UUUUR262601500.U^F26,SELL,10,0.23,0.23,6.5,223.5,15223.5,Sold 10 cash-secured 15.00 puts exp 2026-06-26 at mid 0.230 (trade print 0.22),2026-06-26
+2,2026-06-26,UUUUR262601500.U^F26,ASSIGN,10,,0.0,0.0,0.0,15223.5,Put expired ITM (close 14.62 < 15.00); assigned 10 x 100 shares,2026-06-26
+3,2026-06-26,UUUU.K,BUY,1000,,15.0,0.0,-15000.0,223.5,Shares put to us at the 15.00 strike,2026-06-26
+4,2026-07-06,UUUUG102601400.U^G26,SELL,10,0.405,0.405,6.5,398.5,622.0,Sold 10 covered 14.00 calls exp 2026-07-10 at mid 0.405 (trade print 0.41); basis 15.00,2026-07-10
+5,2026-07-10,UUUUG102601400.U^G26,EXPIRE,10,,0.0,0.0,0.0,622.0,Call expired OTM (close 13.58 <= 14.00); kept shares and $405 premium,2026-07-10
+6,2026-07-13,UUUUG172601350.U^G26,SELL,10,0.29,0.29,6.5,283.5,905.5,Sold 10 covered 13.50 calls exp 2026-07-17 at mid 0.290 (trade print 0.23); basis 15.00,2026-07-17
+7,2026-07-17,UUUUG172601350.U^G26,EXPIRE,10,,0.0,0.0,0.0,905.5,Call expired OTM (close 11.49 <= 13.50); kept shares and $290 premium,2026-07-17
+8,2026-07-20,UUUUG242601200.U^G26,SELL,10,0.3,0.3,6.5,293.5,1199.0,Sold 10 covered 12.00 calls exp 2026-07-24 at mid 0.300 (trade print 0.31); basis 15.00,2026-07-24
+9,2026-07-24,UUUUG242601200.U^G26,EXPIRE,10,,0.0,0.0,0.0,1199.0,Call expired OTM (close 11.30 <= 12.00); kept shares and $300 premium,2026-07-24
+10,2026-07-27,UUUUG312601200.U^G26,SELL,10,0.315,0.315,6.5,308.5,1507.5,Sold 10 covered 12.00 calls exp 2026-07-31 at mid 0.315 (trade print 0.29); basis 15.00,2026-07-31
+11,2026-07-31,UUUUG312601200.U^G26,EXPIRE,10,,0.0,0.0,0.0,1507.5,Call expired OTM (close 11.44 <= 12.00); kept shares and $315 premium,2026-07-31
+12,2026-08-03,UUUUH072601250.U^H26,SELL,10,0.43,0.43,6.5,423.5,1931.0,Sold 10 covered 12.50 calls exp 2026-08-07 at mid 0.430 (trade print 0.35); basis 15.00,2026-08-07
+13,2026-08-07,UUUUH072601250.U^H26,ASSIGN,10,,0.0,0.0,0.0,1931.0,Call expired ITM (close 14.14 > 12.50); shares called away,2026-08-07
+14,2026-08-07,UUUU.K,SELL,1000,,12.5,0.0,12500.0,14431.0,Shares delivered at the 12.50 strike (basis 15.00),2026-08-07
+15,2026-08-10,UUUUT142601350.U^H26,SELL,10,0.17,0.17,6.5,163.5,14594.5,Sold 10 cash-secured 13.50 puts exp 2026-08-14 at mid 0.170 (trade print 0.17),2026-08-14
+16,2026-08-14,UUUUT142601350.U^H26,EXPIRE,10,,0.0,0.0,0.0,14594.5,Put expired OTM (close 15.10 >= 13.50); kept $170 premium,2026-08-14
+17,2026-08-17,UUUUT212601400.U^H26,SELL,10,0.145,0.145,6.5,138.5,14733.0,Sold 10 cash-secured 14.00 puts exp 2026-08-21 at mid 0.145 (trade print 0.16),2026-08-21
+18,2026-08-21,UUUUT212601400.U^H26,EXPIRE,10,,0.0,0.0,0.0,14733.0,Put expired OTM (close 15.14 >= 14.00); kept $145 premium,2026-08-21
+19,2026-08-24,UUUUT282601400.U^H26,SELL,10,0.16,0.16,6.5,153.5,14886.5,Sold 10 cash-secured 14.00 puts exp 2026-08-28 at mid 0.160 (trade print 0.17),2026-08-28
+20,2026-08-28,UUUUT282601400.U^H26,EXPIRE,10,,0.0,0.0,0.0,14886.5,Put expired OTM (close 14.67 >= 14.00); kept $160 premium,2026-08-28
+21,2026-08-31,UUUUU042601400.U^I26,SELL,10,0.175,0.175,6.5,168.5,15055.0,Sold 10 cash-secured 14.00 puts exp 2026-09-04 at mid 0.175 (trade print 0.16),2026-09-04
+22,2026-09-04,UUUUU042601400.U^I26,EXPIRE,10,,0.0,0.0,0.0,15055.0,Put expired OTM (close 14.47 >= 14.00); kept $175 premium,2026-09-04

@@ -1,0 +1,13 @@
+date,status,side,strike,reason
+2026-06-15,SKIP,PUT,,no usable put quote at the target strike (14.50: no quote; 14.00: no quote; 13.50: no quote)
+2026-06-22,FILLED,PUT,15.0,"spot 16.12; 10 contracts secured by $15,000 cash"
+2026-06-29,HOLD,CALL,,spot 14.59 vs basis 15.00; no call at or above basis worth selling (15.00: no quote; 15.50: no quote; 16.00: no quote)
+2026-07-06,FILLED,CALL,14.0,"spot 13.77, basis 15.00; 10 contracts against 1000 shares"
+2026-07-13,FILLED,CALL,13.5,"spot 13.05, basis 15.00; 10 contracts against 1000 shares"
+2026-07-20,FILLED,CALL,12.0,"spot 11.74, basis 15.00; 10 contracts against 1000 shares"
+2026-07-27,FILLED,CALL,12.0,"spot 11.71, basis 15.00; 10 contracts against 1000 shares"
+2026-08-03,FILLED,CALL,12.5,"spot 12.15, basis 15.00; 10 contracts against 1000 shares"
+2026-08-10,FILLED,PUT,13.5,"spot 14.29; 10 contracts secured by $13,500 cash"
+2026-08-17,FILLED,PUT,14.0,"spot 14.79; 10 contracts secured by $14,000 cash"
+2026-08-24,FILLED,PUT,14.0,"spot 14.88; 10 contracts secured by $14,000 cash"
+2026-08-31,FILLED,PUT,14.0,"spot 14.75; 10 contracts secured by $14,000 cash"

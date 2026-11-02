@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Wheel strategy backtest on Amazon: weekly cash-secured puts, assignment, covered calls, with the full blotter, daily ledger and a portfolio viewer.">
+  <title>AMZN · The Wheel</title>
+  <link rel="stylesheet" href="../pmcc/style.css">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="../hw12/plotly.min.js"></script>
+  <script defer src="book.js"></script>
+  <script defer src="variants.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><a class="brand" href="../">JG <span>/</span> OPTIONS RESEARCH</a><nav aria-label="Page sections"><a href="#results">Results</a><a href="#rules">Rules</a><a href="#portfolio">Portfolio</a><a href="#blotter">Blotter</a><a href="#ledger">Ledger</a><a href="#fills">Fills</a><a href="#data">Data</a><a href="../pmcc/">PMCC</a><a href="../hw12/">Covered call</a></nav></header>
+<main id="main">
+  <section class="hero">
+    <div><p class="eyebrow">FINTECH 535 · HW 4 · THE WHEEL</p><h1>Sell the put.<br><em>Get the stock. Sell the call.</em></h1><p class="standfirst">A weekly wheel on <strong id="h-name">Amazon</strong>. Every Monday I sell a cash-secured put about 5% below the stock. If I get assigned, I sell covered calls at or above my cost until the shares get called away, then start over. This page has every trade, the account every day, and whether it beat just holding the stock.</p></div>
+    <aside class="mandate"><span class="tag" id="h-tag">AMZN / WEEKLY WHEEL</span><dl><div><dt>Sample</dt><dd id="h-sample">—</dd></div><div><dt>Starting cash</dt><dd id="h-cash">—</dd></div><div><dt>Option fills</dt><dd id="h-fill">—</dd></div><div><dt>Data</dt><dd id="h-data">—</dd></div></dl><p>Cash-secured means the full strike value sits in cash before the put is sold. No margin, no leverage.</p></aside>
+  </section>
+  <div id="status" class="notice" role="status"><span class="status-dot"></span><div><strong>Loading the backtest…</strong><p>book.js has not loaded yet.</p></div></div>
+
+  <section id="results">
+    <div class="section-top"><p class="eyebrow">01 / THESIS AND RESULT</p><h2>Did it beat holding the stock?</h2>
+      <p class="lead"><strong>My thesis before running it:</strong> Amazon's weekly options have a lot of premium in them relative to how far the stock usually moves in a week, so selling a 5%-out-of-the-money put every week should pay me most weeks and only hand me the stock after a drop, which is a price I would have been happy to pay anyway. Covered calls at or above my cost should then add income while I wait to get out. I expected the wheel to give up some upside if the stock ran, but to have a smaller drawdown and a better Sharpe ratio than buy and hold.</p></div>
+    <div class="metrics">
+      <article><span>Wheel return</span><strong id="m-ret">—</strong><small id="m-ret-note">net of fees, marked at the close</small></article>
+      <article><span>Buy &amp; hold return</span><strong id="m-bh">—</strong><small id="m-bh-note">same cash, bought on the first Monday</small></article>
+      <article><span>Sharpe (wheel / hold)</span><strong id="m-sharpe">—</strong><small>daily returns, annualised, risk-free rate taken as 0</small></article>
+      <article><span>Max drawdown (wheel / hold)</span><strong id="m-dd">—</strong><small>largest fall from a previous high in account value</small></article>
+    </div>
+    <div class="panel"><div class="panel-heading"><div><h3>Account value, wheel versus buy and hold</h3><p>Hover for the exact value. Triangles mark the Fridays I was assigned (down) or called away (up). The dotted line is just holding the shares.</p></div><span class="pill" id="nav-pill">—</span></div><div id="nav-chart" class="chart"></div></div>
+    <div class="panel"><div class="panel-heading"><div><h3>Side by side</h3><p>Everything starts from the same cash on the same day.</p></div></div><div class="table-scroll"><table id="comparison"><thead><tr><th>Account</th><th>Ending value</th><th>Net P&amp;L</th><th>Return</th><th>Annualised</th><th>Volatility</th><th>Sharpe</th><th>Max drawdown</th><th>Worst day</th></tr></thead><tbody></tbody></table></div></div>
+    <div class="insights">
+      <article><span class="small-number">A</span><h3>What actually happened</h3><p id="t-happened">—</p></article>
+      <article><span class="small-number">B</span><h3>Where the money came from</h3><p id="t-money">—</p></article>
+      <article><span class="small-number">C</span><h3>Verdict on the thesis</h3><p id="t-verdict">—</p></article>
+    </div>
+  </section>
+
+  <section id="rules">
+    <div class="section-top"><p class="eyebrow">02 / THE ALGORITHM</p><h2>One rule per step, decided before the run.</h2><p class="lead">The loop only looks at prices that existed at the decision time. Nothing uses a later price to pick a strike or to undo a trade.</p></div>
+    <div class="rule-grid rule-grid-4">
+      <article><span>01 / MONDAY, FLAT</span><h3>Sell a cash-secured put</h3><p>On the first trading day of the week, if I hold no shares and no option, I pick the highest strike at or below <strong id="r-otm">95%</strong> of that day's close, expiring that Friday. I need a real two-sided quote with a bid of at least $0.05 and a spread under half the mid. If that strike has no usable quote I step down one strike, twice at most, then skip the week.</p><p class="muted">Size: as many contracts as the cash can fully cover (strike × 100 each), capped at <span id="r-max">2</span>. Fee $0.65 per contract.</p></article>
+      <article><span>02 / FRIDAY, EXPIRY</span><h3>Settle at the close</h3><p>If the stock closes below the strike I am assigned: I buy 100 shares per contract at the strike and cash goes down by strike × 100. If it closes at or above the strike the put expires and I keep the premium. Weeks where the Friday is a holiday settle on the Thursday the option actually expired.</p></article>
+      <article><span>03 / MONDAY, LONG STOCK</span><h3>Sell a covered call</h3><p>Holding shares, I sell one call per 100 shares at the lowest strike that is at least the higher of the close and my assignment strike. Same quote rules; step up one strike, twice at most. If nothing at or above my cost is worth at least $0.05 I just hold the shares that week and write it down as a skipped week.</p></article>
+      <article><span>04 / FRIDAY, CALL EXPIRY</span><h3>Called away or keep going</h3><p>Close above the call strike: shares are delivered at the strike, I am flat, and the next Monday I start at step 1. Close at or below: the call expires, I keep the shares and the premium, and go back to step 3. No rolling and no buying back, so every option runs to its expiry.</p></article>
+    </div>
+    <div class="risk-panel"><div><p class="eyebrow">WHY THESE CHOICES</p><h3>The small decisions matter more than the big idea</h3><p><strong>5% out of the money</strong> is roughly a 25–30 delta put on a stock with Amazon's weekly volatility: far enough that most weeks expire, close enough that the premium is worth having. <strong>Calls at or above my cost</strong> is the classic wheel discipline. It stops me from locking in a loss on the shares, at the price of some weeks with no income when the stock is well below my basis. The Fills section runs the other version too.</p></div><div><p class="eyebrow">WHAT I DID NOT DO</p><h3>No rolls, no early exits, no leverage</h3><p>I did not roll puts that went in the money and I did not buy back cheap calls early. Both are common in practice, but each one is another rule to justify, and the assignment is about getting the base loop right and reporting it exactly. Every trade is filled at the quoted bid, which is the worse side of the spread for a seller. Cash is never negative and the put is always fully covered.</p></div></div>
+  </section>
+
+  <section id="portfolio">
+    <div class="section-top"><p class="eyebrow">03 / THE ACCOUNT ON ANY DAY</p><h2>Pick a date and see exactly what I held.</h2></div>
+    <div class="panel">
+      <div class="toolbar portfolio-toolbar"><label>Date <select id="pf-date"></select></label><button type="button" id="pf-prev" class="btn">◀ Previous day</button><button type="button" id="pf-next" class="btn">Next day ▶</button><span class="muted" id="pf-hint">Use the arrows to step through the sample.</span></div>
+      <div class="pf-grid">
+        <div class="pf-card"><span>Cash</span><strong id="pf-cash">—</strong><small id="pf-reserved">—</small></div>
+        <div class="pf-card"><span>Shares</span><strong id="pf-shares">—</strong><small id="pf-basis">—</small></div>
+        <div class="pf-card"><span>Short puts</span><strong id="pf-put">—</strong><small id="pf-put-detail">—</small></div>
+        <div class="pf-card"><span>Covered calls</span><strong id="pf-call">—</strong><small id="pf-call-detail">—</small></div>
+        <div class="pf-card"><span>Account value</span><strong id="pf-nav">—</strong><small id="pf-nav-detail">—</small></div>
+        <div class="pf-card"><span>Stock close</span><strong id="pf-close">—</strong><small id="pf-events">—</small></div>
+      </div>
+      <p class="caption">Account value = cash + shares × close − short option marks (at the mid). A short option is a liability, so it comes off. When a held option has no closing quote that day, the mark is the larger of its intrinsic value and the last quote I saw, and the ledger flags it as estimated.</p>
+    </div>
+  </section>
+
+  <section id="blotter">
+    <div class="section-top"><p class="eyebrow">04 / EVERY TRADE</p><h2>Blotter</h2><p class="lead">Only things that actually happened to the account: option sales, expirations, assignments and the stock legs they created. Weeks I skipped are in the decision log underneath, not here.</p></div>
+    <div class="panel">
+      <div class="toolbar"><label>Week <select id="bl-week"><option value="">All weeks</option></select></label><label>Side <select id="bl-side"><option value="">All</option><option>SELL</option><option>EXPIRE</option><option>ASSIGN</option><option>BUY</option></select></label><div class="download-links"><a href="blotter.csv" download>Blotter CSV ↗</a><a href="decisions.csv" download>Decision log CSV ↗</a><a href="book.json" download>Full book JSON ↗</a></div></div>
+      <div class="table-scroll bounded"><table id="blotter-table"><thead><tr><th>#</th><th>Date</th><th>Instrument</th><th>Side</th><th>Qty</th><th>Bid</th><th>Ask</th><th>Fill</th><th>Fee</th><th>Cash change</th><th>Cash after</th><th>Note</th></tr></thead><tbody></tbody></table></div>
+      <p class="caption" id="bl-caption">—</p>
+    </div>
+    <div class="panel">
+      <div class="panel-heading"><div><h3>Decision log, one line per Monday</h3><p>What I did each week and why, including the weeks I did nothing.</p></div></div>
+      <div class="table-scroll bounded"><table id="decisions"><thead><tr><th>Date</th><th>Decision</th><th>Strike</th><th>Close</th><th>Reason</th></tr></thead><tbody></tbody></table></div>
+    </div>
+  </section>
+
+  <section id="ledger">
+    <div class="section-top"><p class="eyebrow">05 / THE ACCOUNT EVERY DAY</p><h2>Ledger</h2></div>
+    <div class="panel">
+      <div class="toolbar"><label>Show <select id="lg-filter"><option value="all">Every trading day</option><option value="events">Days with an event</option><option value="estimated">Days with an estimated mark</option></select></label><div class="download-links"><a href="ledger.csv" download>Ledger CSV ↗</a></div></div>
+      <div class="table-scroll bounded"><table id="ledger-table"><thead><tr><th>Date</th><th>Close</th><th>Cash</th><th>Reserved</th><th>Shares</th><th>Basis</th><th>Short put</th><th>Put mark</th><th>Covered call</th><th>Call mark</th><th>Stock value</th><th>Option liability</th><th>Account value</th><th>Buy &amp; hold</th><th>Events</th></tr></thead><tbody></tbody></table></div>
+      <p class="caption" id="lg-caption">—</p>
+    </div>
+  </section>
+
+  <section id="fills">
+    <div class="section-top"><p class="eyebrow">06 / FILL ASSUMPTIONS</p><h2>What price could I really have gotten?</h2><p class="lead">I only sell options, so the question is whether a limit order would fill at the price I assumed. I use the closing bid of the day, which is the worse side of the spread for a seller. The data below is why I think that is fair, and the stress table shows what happens if it is not.</p></div>
+    <div class="panel"><div class="scatter-layout"><div><div class="panel-heading"><div><h3>Last trade of the day versus the closing mid</h3><p>Near-the-money weekly options, same day, same contract. Each dot is one contract-day with both a two-sided closing quote and a trade.</p></div></div><div id="fill-chart" class="chart"></div></div><div class="scatter-note"><h3>What the quotes say</h3><dl id="fill-stats"></dl><p id="fill-text">—</p></div></div></div>
+    <div class="panel"><div class="panel-heading"><div><h3>The contracts I actually sold</h3><p>Quote at the close on the day of the sale, and the last trade that day if there was one.</p></div></div><div class="table-scroll"><table id="sold"><thead><tr><th>Date</th><th>Contract</th><th>Bid</th><th>Ask</th><th>My fill</th><th>Last trade</th><th>Fill vs trade</th></tr></thead><tbody></tbody></table></div></div>
+    <div class="panel"><div class="panel-heading"><div><h3>If the fills were worse, or the rules slightly different</h3><p>Same data, one rule changed at a time.</p></div></div><div class="table-scroll"><table id="stress" class="stress-table"><thead><tr><th>Version</th><th>Ending value</th><th>Return</th><th>Sharpe</th><th>Max drawdown</th><th>Puts sold</th><th>Assigned</th><th>Calls sold</th><th>Called away</th><th>Weeks with no trade</th><th>What changed</th></tr></thead><tbody></tbody></table></div><p class="caption" id="stress-caption">—</p></div>
+  </section>
+
+  <section id="data">
+    <div class="section-top"><p class="eyebrow">07 / DATA AND HOW TO RERUN IT</p><h2>Where the numbers come from</h2></div>
+    <div class="reproduce-grid">
+      <div><h3>1. Pull</h3><p id="d-pull">—</p><pre>%run wheel_fetch_codebook.py</pre><p>Or locally with Workspace open: <code>LSEG_CONFIG=lseg-data.config.json python wheel_fetch.py</code>. The app key stays in that config file, never in the repo.</p></div>
+      <div><h3>2. Run</h3><p>The engine is one Python file. It reads the source JSON, walks the days in order, and writes the book, blotter, ledger, decision log and the stress variants.</p><pre>python engine.py --source amzn</pre><p><a href="engine.py">engine.py ↗</a> · <a href="wheel_fetch.py">wheel_fetch.py ↗</a> · <a href="wheel_source.json" download>wheel_source.json ↗</a></p></div>
+      <div><h3>3. Check</h3><p id="d-check">—</p><p>Things this page cannot tell you: intraday moves between closes, whether a limit order would have been first in the queue, early assignment before expiry, and whether 26 weeks of one stock generalise. It is one stock in one half-year.</p></div>
+    </div>
+  </section>
+</main>
+<footer><span>James Gao · FINTECH 535 · The Wheel</span><span>Prices from LSEG Workspace · USD · New York close</span><span><a href="https://github.com/JamesGao2003/option-surface-lab/tree/main/wheel">Source repository ↗</a></span></footer>
+</body>
+</html>
