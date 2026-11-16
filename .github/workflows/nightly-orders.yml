@@ -35,8 +35,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Nightly orders: update open_orders.json"
-          file_pattern: |
-            open_orders.json
-            mkt/open_orders.json
-            final/run_log.json
-            final/order_history.json
+          file_pattern: "open_orders.json mkt/open_orders.json final/run_log.json final/order_history.json"
