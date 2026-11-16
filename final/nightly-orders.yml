@@ -1,0 +1,42 @@
+name: Nightly order refresh
+
+on:
+  workflow_dispatch:
+  schedule:
+    # 03:00 UTC = 10 PM New York in winter (11 PM in summer). Runs every night, after the
+    # course server has pushed the day's bars into price_history.json.
+    - cron: "0 3 * * *"
+
+concurrency:
+  group: nightly-orders
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # standard library only, so there is nothing to pip install and nothing to break
+
+      - name: Plan tomorrow's orders
+        run: python final/plan_orders.py
+
+      - name: Commit and push open_orders.json
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Nightly orders: update open_orders.json"
+          file_pattern: |
+            open_orders.json
+            mkt/open_orders.json
+            final/run_log.json
+            final/order_history.json

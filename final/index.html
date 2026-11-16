@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The wheel, run live: a GitHub Action plans the next session's Sanji order every night from the course server's price bars and writes open_orders.json.">
+  <title>AAPL · Live Wheel</title>
+  <link rel="stylesheet" href="../pmcc/style.css">
+  <link rel="stylesheet" href="../wheel/style.css">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="../hw12/plotly.min.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><a class="brand" href="../">JG <span>/</span> OPTIONS RESEARCH</a><nav aria-label="Page sections"><a href="#tonight">Tonight's order</a><a href="#algo">Algorithm</a><a href="#pipeline">Pipeline</a><a href="#history">History</a><a href="#why">Why</a><a href="../wheel/">Wheel backtest</a><a href="../pmcc/">PMCC</a></nav></header>
+<main id="main">
+  <section class="hero">
+    <div><p class="eyebrow">FINTECH 535 · FINAL CYCLE</p><h1>The wheel,<br><em>running by itself.</em></h1><p class="standfirst">Two weeks ago I backtested the wheel on Amazon. Now the same rules run live on <strong>Apple</strong>. Every night at 10 PM a GitHub Action reads the price bars the course server pushed that afternoon, works out whether the book is flat or long shares, picks a strike from the last twenty days of volatility, and writes the next session's order to <code>open_orders.json</code> in the Sanji order language. No person in the loop.</p></div>
+    <aside class="mandate"><span class="tag">AAPL / NIGHTLY WHEEL</span><dl><div><dt>Runs</dt><dd>Every night, 10 PM New York</dd></div><div><dt>Reads</dt><dd>price_history.json, mkt/positions.json</dd></div><div><dt>Writes</dt><dd>open_orders.json</dd></div><div><dt>Last run</dt><dd id="h-last">—</dd></div></dl><p>An algorithm is a function from inputs to a set of open orders. This page shows the inputs, the function, and the output for the latest run.</p></aside>
+  </section>
+  <div id="status" class="notice" role="status"><span class="status-dot"></span><div><strong>Loading the latest run…</strong><p>run_log.json has not loaded yet.</p></div></div>
+
+  <section id="tonight">
+    <div class="section-top"><p class="eyebrow">01 / THE OUTPUT</p><h2>The order the Action wrote last night</h2><p class="lead">This is <a href="../open_orders.json">open_orders.json</a> as it sits in the repo right now, read live by this page. One object per order, in the shape Sanji expects. If it is an empty list, the algorithm decided to do nothing, and the reason is in the log below.</p></div>
+    <div class="metrics">
+      <article><span>Decision</span><strong id="m-decision" class="small">—</strong><small id="m-reason">—</small></article>
+      <article><span>For session</span><strong id="m-session">—</strong><small id="m-expiry">—</small></article>
+      <article><span>Last close used</span><strong id="m-close">—</strong><small id="m-bar">—</small></article>
+      <article><span>Weekly sigma</span><strong id="m-sigma">—</strong><small id="m-sigma-note">—</small></article>
+    </div>
+    <div class="panel"><div class="panel-heading"><div><h3>open_orders.json</h3><p>Exactly what is in the file. The strike is a Sanji token, not a number, because the open it is measured from has not happened yet.</p></div><span class="pill" id="order-pill">—</span></div><pre id="order-json" class="json">loading…</pre><div class="table-scroll"><table id="order-table"><thead><tr><th>Field</th><th>Value</th><th>What it means</th></tr></thead><tbody></tbody></table></div></div>
+    <div class="panel"><div class="panel-heading"><div><h3>Inputs the run saw</h3><p>Straight from <a href="run_log.json">run_log.json</a>, written by the same script run.</p></div></div><div class="table-scroll"><table id="inputs"><thead><tr><th>Input</th><th>Value</th></tr></thead><tbody></tbody></table></div></div>
+  </section>
+
+  <section id="algo">
+    <div class="section-top"><p class="eyebrow">02 / THE FUNCTION</p><h2>What the script decides, and from what</h2><p class="lead">Same wheel as the backtest, with one change: the put distance is not a fixed 5% any more, it comes from the last twenty days of realised volatility. The whole thing is one standard-library Python file, <a href="plan_orders.py">plan_orders.py</a>, about 150 lines.</p></div>
+    <div class="rule-grid rule-grid-4">
+      <article><span>01 / READ</span><h3>Prices and the book</h3><p>Load <code>price_history.json</code>, the daily bars the course server writes from Interactive Brokers for conid 265598 (Apple). If the newest bar is more than five days old, fill the gap from Stooq's free daily CSV so a server outage does not stop the run. Then load <code>mkt/positions.json</code>, the book Sanji writes after each session. If it does not exist yet, the book is all cash: $50,000.</p></article>
+      <article><span>02 / MEASURE</span><h3>Volatility and trend</h3><p>Daily sigma is the standard deviation of the last 20 log returns. Weekly sigma is that times the square root of five. The trend check is the 10-session return. Apple at 1.7% a day gives a weekly sigma near 3.8%.</p></article>
+      <article><span>03 / DECIDE</span><h3>Flat, long, or waiting</h3><p>An option still open: do nothing, the wheel waits for expiry. Long 100 or more shares: sell one covered call per 100 shares at the first $5 strike at or above max(last close, cost basis), written as a bare strike so no option chain is needed. Flat: unless the stock fell 8% or more in 10 sessions, sell a cash-secured put <strong>1.3 weekly sigmas</strong> below tomorrow's open, clamped to 3% to 10%, as many contracts as the cash fully covers, max two.</p></article>
+      <article><span>04 / WRITE</span><h3>One Sanji order</h3><p>Expiry is the Friday of that week if it is at least three days out, else next Friday, moved to Thursday on a holiday. Limit at the mid of the resolved contract at the open. The id carries the session date so Sanji never fills the same order twice. The file is written to the repo root and to <code>mkt/</code>, and the run log and order history are updated for this page.</p></article>
+    </div>
+    <div class="risk-panel"><div><p class="eyebrow">WHY 1.3 SIGMAS</p><h3>The backtest's 5% was really a vol number</h3><p>In the Amazon backtest a fixed 5% worked out to a bit over one weekly sigma, and it got assigned once in 26 weeks. Hard-coding 5% on a different stock would be a different trade: Apple has been calmer than Amazon this autumn. Scaling the distance by realised sigma keeps the assignment rate roughly where the backtest had it. The 3% floor keeps the premium worth the fee; the 10% cap stops the rule from hiding during a panic, since the crash filter already handles that.</p></div><div><p class="eyebrow">WHAT IT DOES NOT DO</p><h3>No chain, no Greeks, no guessing</h3><p>The script never looks at an option chain. Every token it writes is one Sanji can resolve from strikes and the open alone: <code>pct:-N</code>, a bare strike, a date, <code>mid</code>. It does not use <code>delta</code> or <code>premium</code>, which Sanji rejects until Robin has a chain snapshot. It does not edit <code>positions.json</code>, ever. And it does not roll or buy back, same as the backtest.</p></div></div>
+  </section>
+
+  <section id="pipeline">
+    <div class="section-top"><p class="eyebrow">03 / THE PIPELINE</p><h2>Nightly refresh, then deploy</h2><p class="lead">Modelled on the course repo's <code>oi-plots.yml</code>: a cron at 03:00 UTC, which is 10 PM New York in winter, checkout, Python, run the script, commit the files it changed. The Pages site deploys from the main branch, so the commit is the deploy; there is no separate build to fail.</p></div>
+    <div class="pipeline">
+      <div class="step"><span>4 PM ET</span><strong>Course server (Sanji)</strong><p>Pulls the day's bar from Interactive Brokers and commits it to <code>price_history.json</code> in this repo. Once order resolution is on, also writes <code>mkt/positions.json</code> and <code>mkt/fills.json</code>.</p></div>
+      <div class="arrow">→</div>
+      <div class="step"><span>10 PM ET</span><strong>GitHub Action: nightly order refresh</strong><p><code>.github/workflows/nightly-orders.yml</code> runs <code>final/plan_orders.py</code> on a fresh runner, then commits <code>open_orders.json</code>, <code>mkt/open_orders.json</code>, <code>final/run_log.json</code>, <code>final/order_history.json</code>.</p></div>
+      <div class="arrow">→</div>
+      <div class="step"><span>on commit</span><strong>GitHub Pages</strong><p>Rebuilds from main. This page fetches the JSON files, so it shows the latest run without any build step of its own.</p></div>
+      <div class="arrow">→</div>
+      <div class="step"><span>after the close</span><strong>Sanji resolves</strong><p>Reads the order whose <code>for</code> is that session, names the contract from the open, fills or not, appends to <code>fills.json</code>, rewrites <code>positions.json</code>. The next night's run plans from that book.</p></div>
+    </div>
+    <div class="panel"><div class="panel-heading"><div><h3>The workflow file</h3><p><a href="../.github/workflows/nightly-orders.yml">nightly-orders.yml</a>, as committed.</p></div><span class="pill" id="wf-pill">—</span></div><pre id="wf-yaml" class="json">loading…</pre></div>
+    <div class="panel"><div class="panel-heading"><div><h3>Apple's close and the put band the rule would have written</h3><p>Close from the server's bars. The band is close × (1 − 1.3 × weekly sigma) recomputed on every day, clamped to 3% to 10%: where the put strike would have sat if the run had happened that night.</p></div></div><div id="px-chart" class="chart"></div></div>
+  </section>
+
+  <section id="history">
+    <div class="section-top"><p class="eyebrow">04 / EVERY RUN</p><h2>Order history</h2><p class="lead">One row per night the Action ran, newest first, from <a href="order_history.json">order_history.json</a>. Until Sanji starts resolving orders there are no fills to show, so the book stays cash and every run is a fresh put order for the next session.</p></div>
+    <div class="panel"><div class="table-scroll bounded"><table id="hist"><thead><tr><th>Run (NY)</th><th>Decision</th><th>Order id</th><th>For</th><th>Contract</th><th>Expiry</th><th>Strike</th><th>Qty</th><th>Last close</th><th>Weekly σ</th><th>Reason</th></tr></thead><tbody></tbody></table></div><p class="caption" id="hist-caption">—</p></div>
+  </section>
+
+  <section id="why">
+    <div class="section-top"><p class="eyebrow">05 / WHY THIS ALGORITHM</p><h2>Closing the loop on the semester</h2></div>
+    <div class="reproduce-grid">
+      <div><h3>Because it is tested</h3><p>The covered call, the poor man's covered call and the wheel were the three income strategies this course built. The wheel backtest on Amazon had the smallest drawdown and the best Sharpe of the three. Running the one I understand best, with the rules I already wrote down, is the honest choice for a live loop.</p></div>
+      <div><h3>Because Sanji can resolve it</h3><p>The wheel only needs tokens Sanji supports today: a percent-of-open strike, a bare strike, a date expiry, a mid limit. A delta-targeted or premium-targeted version would be rejected until the chain snapshot exists, and an order that is rejected every night is not an algorithm.</p></div>
+      <div><h3>What would change next</h3><p>When fills start, the run log will show the real book and the covered-call branch will get exercised. After that: use the chain snapshot for a <code>delta:15</code> strike instead of the sigma proxy, and add a second name so the cash is not idle while one put is open. Both are one-line changes in the config block.</p></div>
+    </div>
+  </section>
+</main>
+<footer><span>James Gao · FINTECH 535 · Final Cycle</span><span>Bars from the course server (IB) · orders in the Sanji language</span><span><a href="https://github.com/JamesGao2003/option-surface-lab/tree/main/final">Source repository ↗</a> · <a href="https://github.com/JamesGao2003/option-surface-lab/actions">Action runs ↗</a></span></footer>
+</body>
+</html>

@@ -1,0 +1,53 @@
+{
+  "run_at_ny": "2026-11-16 14:53",
+  "config": {
+    "conid": 265598,
+    "symbol": "AAPL",
+    "starting_cash": 50000.0,
+    "contracts_max": 2,
+    "sigma_window": 20,
+    "put_sigma_mult": 1.3,
+    "put_pct_floor": 3,
+    "put_pct_cap": 10,
+    "crash_lookback": 10,
+    "crash_threshold": -0.08,
+    "min_days_to_expiry": 3,
+    "fee_per_contract": 0.65
+  },
+  "notes": [],
+  "price_source": "price_history.json (IB daily bars via the course server)",
+  "last_bar": "2026-11-13",
+  "last_close": 356.27,
+  "daily_sigma": 0.0169,
+  "weekly_sigma": 0.0378,
+  "ret_10d": 0.0338,
+  "bars_used": 38,
+  "book": {
+    "source": "no positions.json yet; assuming all cash",
+    "cash": 50000.0,
+    "shares": 0,
+    "basis": null,
+    "short_puts": 0,
+    "short_calls": 0
+  },
+  "fills_seen": 0,
+  "decision": "SELL CASH-SECURED PUT",
+  "reason": "weekly sigma 3.8% x 1.3 = 4.9%, clamped to 5% below the open; 1 contract(s) secured by about $33,846 of $50,000 cash",
+  "session": "2026-11-17",
+  "expiry": "2026-11-20",
+  "orders": [
+    {
+      "id": "aapl-csp-2026-11-17",
+      "for": "2026-11-17",
+      "order_type": "lmt",
+      "action": "SHT",
+      "qty": 1,
+      "underlying": 265598,
+      "contract": "put",
+      "expiry": "2026-11-20",
+      "strike": "pct:-5",
+      "ref": "open",
+      "lmt_prc": "mid"
+    }
+  ]
+}
