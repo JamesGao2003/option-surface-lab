@@ -1,5 +1,5 @@
 {
-  "run_at_ny": "2026-11-19 06:18",
+  "run_at_ny": "2026-11-20 06:03",
   "config": {
     "conid": 265598,
     "symbol": "AAPL",
@@ -33,12 +33,12 @@
   "fills_seen": 0,
   "decision": "SELL CASH-SECURED PUT",
   "reason": "weekly sigma 3.7% x 1.3 = 4.9%, clamped to 5% below the open; 1 contract(s) secured by about $33,483 of $50,000 cash",
-  "session": "2026-11-19",
+  "session": "2026-11-20",
   "expiry": "2026-11-27",
   "orders": [
     {
-      "id": "aapl-csp-2026-11-19",
-      "for": "2026-11-19",
+      "id": "aapl-csp-2026-11-20",
+      "for": "2026-11-20",
       "order_type": "lmt",
       "action": "SHT",
       "qty": 1,
