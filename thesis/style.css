@@ -1,0 +1,15 @@
+blockquote.thesis{margin:0 0 28px;padding:26px 30px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--green);font:400 clamp(19px,2.1vw,26px)/1.45 var(--serif);letter-spacing:-.01em;border-radius:3px}
+.reproduce-grid.two{grid-template-columns:1fr 1fr;gap:44px}
+.reproduce-grid p,.macro p{font-size:13.5px;line-height:1.8;color:#3c4d47;max-width:74ch}
+.reproduce-grid h3{margin-bottom:8px}
+.macro{background:#fff;border:1px solid var(--line);padding:26px 30px;border-radius:3px}
+.macro p{margin:0 0 14px}.macro p:last-child{margin:0}
+.chart.tall{height:520px}.chart.short2{height:300px}.chart.short3{height:340px}
+.bounded2{max-height:380px}
+td.pos{color:var(--green)}td.neg{color:var(--red)}
+.pill.good{background:#eef6ea;border-color:#bcd6bd;color:var(--green)}
+.pill.bad{background:#fbeae7;border-color:#e3b9b3;color:var(--red);font-weight:700}
+#tests td:first-child,#alpha-table td:first-child{white-space:normal;min-width:240px}
+#tests td:nth-child(2){white-space:normal}
+@media(max-width:1050px){.reproduce-grid.two{grid-template-columns:1fr;gap:22px}}
+tr.sub td{background:#f4f6f1;font-size:10px;font-weight:650;color:var(--muted);text-align:left;letter-spacing:.04em}

@@ -31,8 +31,13 @@ jobs:
       - name: Plan tomorrow's orders
         run: python final/plan_orders.py
 
+      # the thesis page's chart: Apple VIX against realised volatility. A failed download must not block the orders.
+      - name: Rebuild the thesis tracker
+        continue-on-error: true
+        run: python thesis/build_tracker.py
+
       - name: Commit and push open_orders.json
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "Nightly orders: update open_orders.json"
-          file_pattern: "open_orders.json mkt/open_orders.json final/run_log.json final/order_history.json"
+          commit_message: "Nightly run: orders and thesis tracker"
+          file_pattern: "open_orders.json mkt/open_orders.json final/run_log.json final/order_history.json thesis/tracker.json thesis/data/vxapl.csv thesis/data/aapl_close.csv"
