@@ -45,7 +45,7 @@
       xaxis: {anchor: 'y2', gridcolor: C.line},
       shapes: [{type: 'line', xref: 'x', yref: 'paper', x0: t.inception, x1: t.inception, y0: 0, y1: 1, line: {color: C.muted, width: 1, dash: 'dot'}}],
       annotations: [{x: t.inception, xref: 'x', yref: 'paper', y: 1.0, text: 'thesis written', showarrow: false, xanchor: 'right', font: {size: 10, color: C.muted}}]}), cfg);
-    text('tracker-caption', `Sources: Cboe Apple VIX (VXAPL) from FRED, with Yahoo for days FRED has not posted yet; Apple closes from the course server's Interactive Brokers bars, Yahoo before ${'2026-09-23'}. Last bar ${L.date}. Rebuilt ${t.updated_utc} UTC by the nightly Action.`);
+    text('tracker-caption', `Sources: Cboe Apple VIX (VXAPL) from Cboe's history file, FRED and Yahoo as backups; Apple closes from the course server's Interactive Brokers bars, Yahoo before ${'2026-09-23'}. Last bar ${L.date}. Rebuilt ${t.updated_utc} UTC by the nightly Action.`);
 
     // ---- by year ----------------------------------------------------------------------------------
     Plotly.newPlot('year-chart', [

@@ -9,7 +9,8 @@ Runs in the same GitHub Action as final/plan_orders.py, every night at 10 PM New
 Inputs : thesis/data/vxapl.csv, thesis/data/aapl_close.csv   (history kept in the repo, so a dead
                                                               download never empties the chart)
          price_history.json                                   (the course server's AAPL bars)
-         FRED VXAPLCLS, Yahoo ^VXAPL and AAPL                 (new days, when the network answers)
+         Cboe's VXAPL history file, then FRED, then Yahoo     (new days, when the network answers)
+         Yahoo AAPL                                           (closes the server has not pushed)
 Outputs: the two CSV files above, extended
          thesis/tracker.json                                  (what the page reads)
 
@@ -51,7 +52,7 @@ def write_csv(path, header, series):
     path.write_text("\n".join(lines) + "\n")
 
 
-def get(url, timeout=25):
+def get(url, timeout=15):
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (thesis tracker; student project)"})
     with urllib.request.urlopen(req, timeout=timeout) as r:
         return r.read().decode()
@@ -65,6 +66,19 @@ def fetch_fred(series):
             try:
                 out[row[0]] = float(row[1])
             except ValueError:      # FRED writes "." on holidays
+                pass
+    return out
+
+
+def fetch_cboe(index):
+    """{date: close} from Cboe's own daily history file for one of its indices. This is the source of record."""
+    out = {}
+    for row in csv.reader(io.StringIO(get("https://cdn.cboe.com/api/global/us_indices/daily_prices/%s_History.csv" % index))):
+        if len(row) >= 5 and row[0][:1].isdigit():
+            try:
+                m, d, y = row[0].split("/")
+                out["%s-%s-%s" % (y, m.zfill(2), d.zfill(2))] = float(row[4])
+            except ValueError:
                 pass
     return out
 
@@ -85,15 +99,17 @@ def main():
     iv = read_csv(DATA / "vxapl.csv")
     px = read_csv(DATA / "aapl_close.csv")
 
-    for name, fn in (("FRED VXAPLCLS", lambda: fetch_fred("VXAPLCLS")), ("Yahoo ^VXAPL", lambda: fetch_yahoo("%5EVXAPL", "5d"))):
+    # Cboe publishes the index, so its file wins. FRED and Yahoo only fill days Cboe's file did not give us.
+    for name, fn in (("Cboe VXAPL_History.csv", lambda: fetch_cboe("VXAPL")), ("FRED VXAPLCLS", lambda: fetch_fred("VXAPLCLS")),
+                     ("Yahoo ^VXAPL", lambda: fetch_yahoo("%5EVXAPL", "5d"))):
         try:
             new = fn()
             added = sum(1 for d in new if d not in iv)
-            if name.startswith("FRED"):
-                iv.update(new)                      # FRED is the series of record
+            if name.startswith("Cboe"):
+                iv.update(new)
             else:
-                iv.update({d: v for d, v in new.items() if d not in iv})   # Yahoo only fills days FRED has not posted yet
-            notes.append("%s: %d days read, %d new" % (name, len(new), added))
+                iv.update({d: v for d, v in new.items() if d not in iv})
+            notes.append("%s: %d days read, %d new, last %s" % (name, len(new), added, max(new) if new else "none"))
         except Exception as exc:
             notes.append("%s unavailable (%s); using the stored history" % (name, type(exc).__name__))
 

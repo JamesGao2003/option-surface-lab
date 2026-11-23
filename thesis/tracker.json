@@ -3,8 +3,9 @@
  "inception": "2026-11-23",
  "definition": "gap = Apple VIX (30-day implied volatility) minus Apple's 21-session realised volatility, both annualised, in volatility points. Settled gap compares the Apple VIX from 21 sessions ago with the volatility realised since then.",
  "notes": [
-  "FRED VXAPLCLS unavailable (TimeoutError); using the stored history",
-  "Yahoo ^VXAPL: 1 days read, 0 new",
+  "Cboe VXAPL_History.csv: 3989 days read, 0 new, last 2026-11-23",
+  "FRED VXAPLCLS: 4146 days read, 0 new, last 2026-11-20",
+  "Yahoo ^VXAPL: 1 days read, 0 new, last 2026-11-23",
   "Yahoo AAPL: 65 days read, 0 new",
   "price_history.json: 44 server bars, last 2026-11-23"
  ],
