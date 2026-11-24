@@ -262,5 +262,27 @@
         "lmt_prc": "mid"
       }
     ]
+  },
+  {
+    "run_at_ny": "2026-11-23 19:27",
+    "decision": "SELL CASH-SECURED PUT",
+    "reason": "weekly sigma 3.9% x 1.3 = 5.1%, clamped to 5% below the open; 1 contract(s) secured by about $33,163 of $50,000 cash",
+    "last_close": 349.08,
+    "weekly_sigma": 0.03917,
+    "orders": [
+      {
+        "id": "aapl-csp-2026-11-24",
+        "for": "2026-11-24",
+        "order_type": "lmt",
+        "action": "SHT",
+        "qty": 1,
+        "underlying": 265598,
+        "contract": "put",
+        "expiry": "2026-11-27",
+        "strike": "pct:-5",
+        "ref": "open",
+        "lmt_prc": "mid"
+      }
+    ]
   }
 ]
