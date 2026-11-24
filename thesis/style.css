@@ -13,3 +13,7 @@ td.pos{color:var(--green)}td.neg{color:var(--red)}
 #tests td:nth-child(2){white-space:normal}
 @media(max-width:1050px){.reproduce-grid.two{grid-template-columns:1fr;gap:22px}}
 tr.sub td{background:#f4f6f1;font-size:10px;font-weight:650;color:var(--muted);text-align:left;letter-spacing:.04em}
+tr.hl td{background:#eef6ea;font-weight:600}
+.risk-panel a{color:var(--lime)}
+#tests td:nth-child(4){white-space:normal;color:var(--muted)}
+#periods td:first-child,#variants td:first-child{white-space:normal;min-width:220px}
