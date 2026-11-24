@@ -10,9 +10,10 @@
   const tone = v => !fin(v) ? '' : v > 0 ? 'pos' : v < 0 ? 'neg' : '';
   const get = async url => { try { const r = await fetch(url, {cache: 'no-store'}); if (!r.ok) throw new Error(r.status); return await r.json(); } catch (e) { return null; } };
   const C = {ink: '#162623', muted: '#5d6e67', green: '#17644e', red: '#a34036', amber: '#996317', blue: '#4067a7', line: '#d9dfd8'};
+  const narrow = window.innerWidth < 700;   // on a phone the legend goes under the chart so it cannot sit on the lines
   const layout = extra => Object.assign({margin: {l: 52, r: 18, t: 10, b: 40}, paper_bgcolor: 'rgba(0,0,0,0)', plot_bgcolor: 'rgba(0,0,0,0)',
     font: {family: 'Inter, ui-sans-serif, system-ui, sans-serif', size: 12, color: C.ink}, hovermode: 'x unified',
-    legend: {orientation: 'h', y: 1.12, x: 0}, xaxis: {gridcolor: C.line, linecolor: C.line}, yaxis: {gridcolor: C.line, zerolinecolor: '#9ca99e'}}, extra);
+    legend: narrow ? {orientation: 'h', x: 0, y: -0.16, yanchor: 'top', font: {size: 10}} : {orientation: 'h', y: 1.12, x: 0}, xaxis: {gridcolor: C.line, linecolor: C.line}, yaxis: {gridcolor: C.line, zerolinecolor: '#9ca99e'}}, extra);
   const cfg = {displayModeBar: false, responsive: true};
 
   (async () => {
