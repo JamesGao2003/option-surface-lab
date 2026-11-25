@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-24 13:25",
+ "updated_utc": "2026-11-25 12:18",
  "inception": "2026-11-23",
  "rule": {
   "symbol": "SPY",
@@ -10,47 +10,40 @@
  },
  "definition": "Buy SPY at the open after a close with 2-day RSI below 10 and price above the 200-day average; sell at the open after the first close above the 5-day average.",
  "notes": [
-  "Yahoo SPY: 65 bars read, 0 new, last 2026-11-23"
+  "Yahoo SPY: 65 bars read, 1 new, last 2026-11-24"
  ],
  "tonight": {
-  "date": "2026-11-23",
-  "close": 722.29,
-  "rsi2": 64.5,
-  "avg5": 718.12,
-  "avg200": 732.91,
+  "date": "2026-11-24",
+  "close": 718.78,
+  "rsi2": 56.6,
+  "avg5": 715.39,
+  "avg200": 733.04,
   "above_trend": false,
-  "pct_from_avg200": -1.4,
-  "state": "IN A TRADE",
-  "detail": "Bought at the 2026-11-17 open at 738.39, now -2.2% after 5 sessions. Today's close is back above the 5-day average, so it sells at tomorrow's open.",
-  "open_trade": {
-   "signal": "2026-11-16",
-   "in": "2026-11-17",
-   "entry": 738.39,
-   "days": 4,
-   "exit_tomorrow": true,
-   "mark": -0.0218
-  }
+  "pct_from_avg200": -1.9,
+  "state": "SWITCHED OFF",
+  "detail": "SPY closed at 718.78, below its 200-day average of 733.04, so the rule takes no new trades until it closes back above.",
+  "open_trade": null
  },
  "stats": {
-  "trades": 263,
-  "avg_pct": 0.58,
+  "trades": 264,
+  "avg_pct": 0.57,
   "median_pct": 0.73,
   "win_pct": 77.0,
-  "t_stat": 5.9,
+  "t_stat": 5.7,
   "worst_pct": -9.3,
   "best_pct": 10.4,
   "avg_days": 3.3,
   "avg_win_pct": 1.19,
-  "avg_loss_pct": -1.43,
+  "avg_loss_pct": -1.46,
   "per_year": 8.0,
-  "sum_per_year_pct": 4.7,
+  "sum_per_year_pct": 4.6,
   "start": "1993-11-12",
-  "end": "2026-11-23",
+  "end": "2026-11-24",
   "years": 33.0,
-  "time_in_market_pct": 10.5,
-  "per_day_held_bp": 17.6,
+  "time_in_market_pct": 10.6,
+  "per_day_held_bp": 17.1,
   "per_day_always_in_bp": 4.0,
-  "equity_multiple_after_costs": 3.93,
+  "equity_multiple_after_costs": 3.8,
   "worst_drawdown_pct": -10.3,
   "cost_per_round_trip_bp": 5.0,
   "cost_per_year_pct": 0.4,
@@ -100,35 +93,35 @@
    "label": "2020 to the thesis date",
    "start": "2020-01-01",
    "end": "2026-11-23",
-   "trades": 64,
-   "avg_pct": 0.58,
-   "median_pct": 0.83,
-   "win_pct": 78.0,
-   "t_stat": 3.4,
+   "trades": 65,
+   "avg_pct": 0.53,
+   "median_pct": 0.79,
+   "win_pct": 77.0,
+   "t_stat": 2.9,
    "worst_pct": -4.5,
    "best_pct": 4.3,
-   "avg_days": 3.1,
+   "avg_days": 3.2,
    "avg_win_pct": 1.13,
-   "avg_loss_pct": -1.39,
-   "per_year": 9.3,
-   "sum_per_year_pct": 5.4
+   "avg_loss_pct": -1.5,
+   "per_year": 9.4,
+   "sum_per_year_pct": 5.0
   },
   {
    "label": "Last two years before the thesis",
    "start": "2024-11-23",
    "end": "2026-11-23",
-   "trades": 22,
-   "avg_pct": 0.55,
-   "median_pct": 0.83,
-   "win_pct": 82.0,
-   "t_stat": 3.0,
-   "worst_pct": -1.9,
+   "trades": 23,
+   "avg_pct": 0.39,
+   "median_pct": 0.79,
+   "win_pct": 78.0,
+   "t_stat": 1.6,
+   "worst_pct": -3.1,
    "best_pct": 1.5,
-   "avg_days": 2.9,
+   "avg_days": 3.0,
    "avg_win_pct": 0.9,
-   "avg_loss_pct": -1.01,
-   "per_year": 11.0,
-   "sum_per_year_pct": 6.1
+   "avg_loss_pct": -1.43,
+   "per_year": 11.5,
+   "sum_per_year_pct": 4.5
   }
  ],
  "by_year": [
@@ -314,8 +307,8 @@
   },
   {
    "year": "2026",
-   "trades": 13,
-   "sum_pct": 4.6,
+   "trades": 14,
+   "sum_pct": 1.4,
    "wins": 10
   }
  ],
@@ -337,63 +330,63 @@
   },
   {
    "label": "RSI(2) below 10 (the rule)",
-   "trades": 263,
-   "avg_pct": 0.58,
+   "trades": 264,
+   "avg_pct": 0.57,
    "median_pct": 0.73,
    "win_pct": 77.0,
-   "t_stat": 5.9,
+   "t_stat": 5.7,
    "worst_pct": -9.3,
    "best_pct": 10.4,
    "avg_days": 3.3,
    "avg_win_pct": 1.19,
-   "avg_loss_pct": -1.43,
+   "avg_loss_pct": -1.46,
    "per_year": 8.0,
-   "sum_per_year_pct": 4.7
+   "sum_per_year_pct": 4.6
   },
   {
    "label": "RSI(2) below 15",
-   "trades": 387,
-   "avg_pct": 0.49,
-   "median_pct": 0.69,
+   "trades": 388,
+   "avg_pct": 0.48,
+   "median_pct": 0.68,
    "win_pct": 76.0,
-   "t_stat": 7.0,
+   "t_stat": 6.8,
    "worst_pct": -9.3,
    "best_pct": 5.0,
    "avg_days": 3.4,
    "avg_win_pct": 1.04,
-   "avg_loss_pct": -1.3,
+   "avg_loss_pct": -1.32,
    "per_year": 11.7,
-   "sum_per_year_pct": 5.7
+   "sum_per_year_pct": 5.6
   },
   {
    "label": "RSI(2) below 20",
-   "trades": 467,
-   "avg_pct": 0.39,
+   "trades": 468,
+   "avg_pct": 0.38,
    "median_pct": 0.58,
    "win_pct": 74.0,
-   "t_stat": 6.0,
+   "t_stat": 5.8,
    "worst_pct": -9.3,
    "best_pct": 4.1,
    "avg_days": 3.4,
    "avg_win_pct": 0.98,
-   "avg_loss_pct": -1.34,
-   "per_year": 14.1,
-   "sum_per_year_pct": 5.5
+   "avg_loss_pct": -1.35,
+   "per_year": 14.2,
+   "sum_per_year_pct": 5.4
   },
   {
    "label": "Exit above the 3-day average",
-   "trades": 274,
-   "avg_pct": 0.41,
-   "median_pct": 0.5,
-   "win_pct": 74.0,
-   "t_stat": 4.3,
+   "trades": 275,
+   "avg_pct": 0.39,
+   "median_pct": 0.49,
+   "win_pct": 73.0,
+   "t_stat": 4.2,
    "worst_pct": -11.7,
    "best_pct": 9.6,
    "avg_days": 2.3,
    "avg_win_pct": 1.0,
-   "avg_loss_pct": -1.25,
+   "avg_loss_pct": -1.28,
    "per_year": 8.3,
-   "sum_per_year_pct": 3.4
+   "sum_per_year_pct": 3.3
   },
   {
    "label": "Exit above the 10-day average",
@@ -427,37 +420,37 @@
   },
   {
    "label": "No trend filter",
-   "trades": 399,
+   "trades": 400,
    "avg_pct": 0.53,
-   "median_pct": 0.72,
+   "median_pct": 0.71,
    "win_pct": 72.0,
-   "t_stat": 4.7,
+   "t_stat": 4.6,
    "worst_pct": -13.5,
    "best_pct": 12.7,
    "avg_days": 3.6,
    "avg_win_pct": 1.46,
-   "avg_loss_pct": -1.83,
+   "avg_loss_pct": -1.84,
    "per_year": 12.1,
-   "sum_per_year_pct": 6.5
+   "sum_per_year_pct": 6.4
   }
  ],
  "tests": [
   {
    "id": "last20",
    "label": "The last 20 closed trades add up to 0 or less",
-   "value": "+9.9%",
+   "value": "+7.7%",
    "threshold": "0% or less",
    "tripped": false,
-   "as_of": "2026-11-05",
+   "as_of": "2026-11-24",
    "history": "true after 6% of trades since 1993"
   },
   {
    "id": "drawdown",
    "label": "The rule's equity is 15% or more below its high",
-   "value": "0.0%",
+   "value": "-3.2%",
    "threshold": "-15% or worse",
    "tripped": false,
-   "as_of": "2026-11-05",
+   "as_of": "2026-11-24",
    "history": "worst so far -10.3%"
   },
   {
@@ -466,7 +459,7 @@
    "value": "no live trade closed yet",
    "threshold": "0% or less",
    "tripped": false,
-   "as_of": "2026-11-23",
+   "as_of": "2026-11-24",
    "history": "0 of 10 so far"
   }
  ],
@@ -3688,6 +3681,18 @@
    "days": 3,
    "rsi": 9.3,
    "live": false
+  },
+  {
+   "signal": "2026-11-16",
+   "in": "2026-11-17",
+   "out": "2026-11-24",
+   "entry": 738.39,
+   "exit": 715.15,
+   "div": 0,
+   "ret_pct": -3.15,
+   "days": 5,
+   "rsi": 10.0,
+   "live": false
   }
  ],
  "equity": [
@@ -4742,16 +4747,13 @@
   {
    "date": "2026-11-05",
    "equity": 3.9268
+  },
+  {
+   "date": "2026-11-24",
+   "equity": 3.8012
   }
  ],
  "series": [
-  {
-   "date": "2025-08-18",
-   "close": 643.3,
-   "avg200": 591.55,
-   "avg5": 643.85,
-   "rsi2": 46.3
-  },
   {
    "date": "2025-08-19",
    "close": 639.81,
@@ -6984,6 +6986,13 @@
    "avg200": 732.91,
    "avg5": 718.12,
    "rsi2": 64.5
+  },
+  {
+   "date": "2026-11-24",
+   "close": 718.78,
+   "avg200": 733.04,
+   "avg5": 715.39,
+   "rsi2": 56.6
   }
  ],
  "live": {
