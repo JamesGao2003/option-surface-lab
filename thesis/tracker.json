@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-25 12:18",
+ "updated_utc": "2026-11-26 12:02",
  "inception": "2026-11-23",
  "rule": {
   "symbol": "SPY",
@@ -10,18 +10,18 @@
  },
  "definition": "Buy SPY at the open after a close with 2-day RSI below 10 and price above the 200-day average; sell at the open after the first close above the 5-day average.",
  "notes": [
-  "Yahoo SPY: 65 bars read, 1 new, last 2026-11-24"
+  "Yahoo SPY: 65 bars read, 1 new, last 2026-11-25"
  ],
  "tonight": {
-  "date": "2026-11-24",
-  "close": 718.78,
-  "rsi2": 56.6,
-  "avg5": 715.39,
-  "avg200": 733.04,
+  "date": "2026-11-25",
+  "close": 716.7,
+  "rsi2": 49.5,
+  "avg5": 712.69,
+  "avg200": 733.16,
   "above_trend": false,
-  "pct_from_avg200": -1.9,
+  "pct_from_avg200": -2.2,
   "state": "SWITCHED OFF",
-  "detail": "SPY closed at 718.78, below its 200-day average of 733.04, so the rule takes no new trades until it closes back above.",
+  "detail": "SPY closed at 716.70, below its 200-day average of 733.16, so the rule takes no new trades until it closes back above.",
   "open_trade": null
  },
  "stats": {
@@ -38,7 +38,7 @@
   "per_year": 8.0,
   "sum_per_year_pct": 4.6,
   "start": "1993-11-12",
-  "end": "2026-11-24",
+  "end": "2026-11-25",
   "years": 33.0,
   "time_in_market_pct": 10.6,
   "per_day_held_bp": 17.1,
@@ -459,7 +459,7 @@
    "value": "no live trade closed yet",
    "threshold": "0% or less",
    "tripped": false,
-   "as_of": "2026-11-24",
+   "as_of": "2026-11-25",
    "history": "0 of 10 so far"
   }
  ],
@@ -4755,13 +4755,6 @@
  ],
  "series": [
   {
-   "date": "2025-08-19",
-   "close": 639.81,
-   "avg200": 591.84,
-   "avg5": 643.28,
-   "rsi2": 9.4
-  },
-  {
    "date": "2025-08-20",
    "close": 638.11,
    "avg200": 592.13,
@@ -6993,6 +6986,13 @@
    "avg200": 733.04,
    "avg5": 715.39,
    "rsi2": 56.6
+  },
+  {
+   "date": "2026-11-25",
+   "close": 716.7,
+   "avg200": 733.16,
+   "avg5": 712.69,
+   "rsi2": 49.5
   }
  ],
  "live": {
