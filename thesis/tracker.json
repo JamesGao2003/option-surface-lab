@@ -1,5 +1,5 @@
 {
- "updated_utc": "2026-11-26 12:02",
+ "updated_utc": "2026-11-27 11:53",
  "inception": "2026-11-23",
  "rule": {
   "symbol": "SPY",
@@ -10,7 +10,7 @@
  },
  "definition": "Buy SPY at the open after a close with 2-day RSI below 10 and price above the 200-day average; sell at the open after the first close above the 5-day average.",
  "notes": [
-  "Yahoo SPY: 65 bars read, 1 new, last 2026-11-25"
+  "Yahoo SPY: 65 bars read, 0 new, last 2026-11-25"
  ],
  "tonight": {
   "date": "2026-11-25",
