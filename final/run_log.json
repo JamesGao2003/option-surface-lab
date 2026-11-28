@@ -1,5 +1,5 @@
 {
-  "run_at_ny": "2026-11-27 06:53",
+  "run_at_ny": "2026-11-28 06:28",
   "config": {
     "conid": 265598,
     "symbol": "AAPL",
@@ -16,12 +16,12 @@
   },
   "notes": [],
   "price_source": "price_history.json (IB daily bars via the course server)",
-  "last_bar": "2026-11-23",
-  "last_close": 349.08,
-  "daily_sigma": 0.01752,
-  "weekly_sigma": 0.03917,
-  "ret_10d": -0.0046,
-  "bars_used": 44,
+  "last_bar": "2026-11-27",
+  "last_close": 358.54,
+  "daily_sigma": 0.01733,
+  "weekly_sigma": 0.03876,
+  "ret_10d": 0.0103,
+  "bars_used": 47,
   "book": {
     "source": "no positions.json yet; assuming all cash",
     "cash": 50000.0,
@@ -32,13 +32,13 @@
   },
   "fills_seen": 0,
   "decision": "SELL CASH-SECURED PUT",
-  "reason": "weekly sigma 3.9% x 1.3 = 5.1%, clamped to 5% below the open; 1 contract(s) secured by about $33,163 of $50,000 cash",
-  "session": "2026-11-27",
+  "reason": "weekly sigma 3.9% x 1.3 = 5.0%, clamped to 5% below the open; 1 contract(s) secured by about $34,061 of $50,000 cash",
+  "session": "2026-11-30",
   "expiry": "2026-12-04",
   "orders": [
     {
-      "id": "aapl-csp-2026-11-27",
-      "for": "2026-11-27",
+      "id": "aapl-csp-2026-11-30",
+      "for": "2026-11-30",
       "order_type": "lmt",
       "action": "SHT",
       "qty": 1,
